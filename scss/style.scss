@@ -239,10 +239,12 @@ footer {
     align-items: center;
     padding: 2rem 4rem;
     height: 18rem;
-    overflow-x: hidden;
     .logo {
         width: 5rem;
         height: auto;
+    }
+    .footer__copyright {
+        display: none;
     }
     .footer__block {
         display: flex;
@@ -267,6 +269,7 @@ footer {
             font-size: 2.6rem;
         }
         .footer__copyright {
+            display: block;
             font-weight: 300;
             font-size: 1.7rem;
         }
@@ -314,7 +317,7 @@ footer {
                     li {
                         margin: 0;
                         &:first-child {
-                          margin-right: 0;
+                            margin-right: 0;
                         }
                         &:first-child {
                             margin-bottom: .5rem;
@@ -333,12 +336,10 @@ footer {
 
 @media screen and (max-width: 1024px) {
     .bg-gradient {
-        height: 210vh;
+        height: 220vh;
     }
     main.main {
-        height: 200vh;
-        
-        overflow: hidden;
+        // min-height: 200vh;
         .main__header {
             font-size: 2.5rem;
         }
@@ -393,10 +394,33 @@ footer {
         }
     }
     footer {
-      flex-direction: column;
-      .footer__block {
-        margin: 0 !important;
-      }
+        padding: 2rem 1rem;
+        height: auto;
+        flex-direction: column;
+        .footer__block {
+            margin: 0 !important;
+            .footer__header {
+                margin: 2rem 0;
+                text-align: center;
+            }
+            a {
+                margin-top: 3rem;
+                margin-bottom: 4rem;
+                width: 50%;
+                min-width: 15rem;
+            }
+            .footer__copyright {
+                display: none;
+            }
+            .footer__address {
+                text-align: center;
+            }
+        }
+        .footer__copyright {
+            display: block;
+            font-weight: 300;
+            font-size: 1.7rem;
+        }
     }
 }
 
@@ -420,4 +444,11 @@ footer {
     }
 }
 
-// TODO 325 PX
+@media screen and (max-width: 375px) {
+  .bg-gradient {
+    height: 190vh;
+  }
+   html {
+     font-size: 13px;
+   }
+}

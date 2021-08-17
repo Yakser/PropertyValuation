@@ -314,12 +314,15 @@ footer {
           align-items: center;
   padding: 2rem 4rem;
   height: 18rem;
-  overflow-x: hidden;
 }
 
 footer .logo {
   width: 5rem;
   height: auto;
+}
+
+footer .footer__copyright {
+  display: none;
 }
 
 footer .footer__block {
@@ -363,6 +366,7 @@ footer .footer__block span a {
 }
 
 footer .footer__block .footer__copyright {
+  display: block;
   font-weight: 300;
   font-size: 1.7rem;
 }
@@ -421,11 +425,7 @@ footer .footer__block .footer__address {
 
 @media screen and (max-width: 1024px) {
   .bg-gradient {
-    height: 210vh;
-  }
-  main.main {
-    height: 200vh;
-    overflow: hidden;
+    height: 220vh;
   }
   main.main .main__header {
     font-size: 2.5rem;
@@ -498,6 +498,8 @@ footer .footer__block .footer__address {
     display: flex;
   }
   footer {
+    padding: 2rem 1rem;
+    height: auto;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -505,6 +507,27 @@ footer .footer__block .footer__address {
   }
   footer .footer__block {
     margin: 0 !important;
+  }
+  footer .footer__block .footer__header {
+    margin: 2rem 0;
+    text-align: center;
+  }
+  footer .footer__block a {
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    width: 50%;
+    min-width: 15rem;
+  }
+  footer .footer__block .footer__copyright {
+    display: none;
+  }
+  footer .footer__block .footer__address {
+    text-align: center;
+  }
+  footer .footer__copyright {
+    display: block;
+    font-weight: 300;
+    font-size: 1.7rem;
   }
 }
 
@@ -521,5 +544,14 @@ footer .footer__block .footer__address {
   }
   main.main .main__header {
     font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .bg-gradient {
+    height: 190vh;
+  }
+  html {
+    font-size: 13px;
   }
 }
