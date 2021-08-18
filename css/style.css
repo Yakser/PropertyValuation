@@ -326,6 +326,10 @@ main .main__banks .main__bank-block img {
   opacity: .5;
 }
 
+main.banks {
+  margin-bottom: 5rem;
+}
+
 main.banks .main__desc {
   margin: 0;
 }
