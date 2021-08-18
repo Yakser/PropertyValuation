@@ -74,15 +74,22 @@ body {
     font-size: 1.3rem;
     border-radius: 12px;
     transition: .3s ease-in;
-    width: 22rem;
+    min-width: 22rem;
     height: 3.6rem;
+    padding: 0 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
     white-space: nowrap;
     cursor: pointer;
+    span {
+        color: #fff;
+    }
+    img.ico {
+        margin-right: 1rem;
+    }
     &.btn-blue {
-        background-color: #2F89CE;
+        background-color: #477ABC;
         &:hover {
             box-shadow: 0px 4px 16px rgba(47, 137, 206, 0.5);
         }
@@ -167,6 +174,13 @@ main {
         font-size: 3rem;
         margin-top: 3rem;
         margin-bottom: 3rem;
+        text-align: center;
+        &.main__header_dark {
+            color: $black;
+        }
+    }
+    .main__desc_dark {
+        color: $black;
     }
     .blocks {
         display: flex;
@@ -213,8 +227,11 @@ main {
         font-weight: 300;
         line-height: 1.8rem;
         font-size: 1.2rem;
-        width: 40rem;
+        max-width: 40rem;
         text-align: center;
+        &.main__desc_dark {
+            color: $black;
+        }
     }
     .main__banks {
         display: flex;
@@ -226,6 +243,61 @@ main {
             }
             img {
                 opacity: .5;
+            }
+        }
+    }
+}
+
+main.banks {
+    .main__desc {
+        margin: 0;
+    }
+    .mobile-element {
+        display: none;
+    }
+    .main__btns {
+        width: calc(100% - 2rem);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 2rem;
+        a:first-child {
+            margin-right: 2rem;
+            white-space: normal;
+        }
+        a:last-child {
+            width: 30%;
+        }
+    }
+    .main__banks {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 70%;
+        .bank {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: #FFFFFF;
+            border: 2px solid #EEEEEE;
+            border-radius: 16px;
+            transition: .2s ease-in;
+            width: 18rem;
+            height: 10rem;
+            padding-left: 2rem;
+            margin-bottom: 3rem;
+            margin-right: 1rem;
+            cursor: pointer;
+            .bank__logo {
+                margin-bottom: 2rem;
+                width: calc(100% - 4rem);
+            }
+            span {
+                font-weight: 500;
+                font-size: 1.2rem;
+            }
+            &:hover {
+                box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.05);
             }
         }
     }
@@ -342,13 +414,37 @@ footer {
         height: 220vh;
     }
     main.main {
-        // min-height: 200vh;
-        .main__header {
-            font-size: 2.5rem;
-        }
         .main__desc,
         .main__banks {
             display: none;
+        }
+    }
+    main.banks {
+        .main__btns {
+            a:first-child {
+                margin: 0;
+            }
+            a:last-child {
+                display: none;
+            }
+        }
+        .mobile-element {
+            display: flex;
+        }
+        .main__banks {
+            width: calc(100% - 2rem);
+            .bank {
+                margin: 0;
+                margin-bottom: 2rem;
+                width: 25rem;
+                height: 14rem;
+            }
+        }
+    }
+    main {
+        // min-height: 200vh;
+        .main__header {
+            font-size: 2.5rem;
         }
         .blocks {
             flex-direction: column;
@@ -402,23 +498,31 @@ footer {
         .footer__block {
             flex-direction: column;
             align-items: center;
-            .footer__right-block{
-              margin: 0;
-            } .footer__header {
+            .footer__right-block {
+                margin: 0;
+            }
+            .footer__header {
                 margin: 2rem 0;
                 text-align: center;
             }
-            a {
+            a.btn {
                 margin-top: 3rem;
                 margin-bottom: 4rem;
-                width: 50%;
-                min-width: 15rem;
+                width: 40%;
+                min-width: 12rem;
+                max-width: 18rem;
+                &.btn:last-child {
+                    width: calc(50% + 2rem);
+                    // border: 1px solid red;
+                    min-width: 17rem;
+                    max-width: 22rem;
+                }
             }
             .footer__address {
                 text-align: center;
             }
             .footer__copyright {
-              order: 2;
+                order: 2;
             }
         }
     }
