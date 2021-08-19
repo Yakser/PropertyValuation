@@ -172,7 +172,6 @@ input[type="checkbox"] {
     height: 30rem;
     z-index: 100000;
     padding: 2rem;
-    
     .modal__header {
         font-size: 2.5rem;
         margin-bottom: 2rem;
@@ -457,7 +456,7 @@ main.banks {
 
 main.report {
     .main__header-block {
-        width: 60%;
+        width: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -716,6 +715,73 @@ footer {
             }
         }
     }
+    .modal {
+        width: calc(100% - 2rem);
+        // height: calc(100% - 4rem);
+        height: max-content;
+        left: 1rem;
+        top: 2rem;
+
+        .modal__header {
+            margin-top: 1.5rem;
+            font-size: 2rem;
+        }
+        .modal__desc {
+            text-align: center;
+        }
+        .modal__options {
+            flex-direction: column;
+            align-items: flex-start;
+            padding-bottom: 1rem;
+            .modal__option {
+                margin: 0;
+                margin-bottom: 1rem;
+                span {}
+            }
+        }
+        .modal__bottom {
+            flex-direction: column;
+            align-items: center;
+            margin: 0;
+            .modal__subheader {
+                text-align: center;
+                margin-bottom: 1.5rem;
+            }
+            .modal__form {
+                width: 100%;
+                border-bottom: 2px dashed #D7D7D7;
+                form {
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    flex-wrap: nowrap;
+                    .input-tel {
+                        margin-bottom: 1rem;
+                        order: 0;
+                        padding: .5rem 1rem;
+                    }
+                    label {
+                        order: 1;
+                        margin-bottom: 2rem;
+                    }
+                    input[type='submit'] {
+                        margin: 0;
+                        margin-bottom: 2rem;
+                        order: 2;
+                    }
+                }
+            }
+            .modal__socials {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        .modal__close {
+            span {}
+        }
+    }
     nav {
         width: 100%;
         margin: 0;
@@ -765,11 +831,49 @@ footer {
     }
 }
 
+@media screen and (max-width: 900px) {
+    main.report {
+        .report-block {
+            width: 85%;
+        }
+    }
+}
+
 @media screen and (max-width: 768px) {
     main.main {
         .main__header {
             font-size: 2rem;
             text-align: center;
+        }
+    }
+    main.report {
+        .main__header-block {
+            width: calc(100% - 1rem);
+            padding-bottom: 2rem;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .main__header {
+                margin-bottom: 1rem;
+            }
+        }
+        .report-block {
+            width: calc(100% - 1rem);
+            padding-top: 2rem;
+            .report-block__header {
+                flex-direction: column;
+                h3 {
+                    margin: 0;
+                    margin-bottom: 1rem;
+                }
+            }
+            .report-types {
+                flex-direction: column;
+                .report-type {
+                    margin: 0;
+                    margin-bottom: 1rem;
+                }
+            }
         }
     }
 }
