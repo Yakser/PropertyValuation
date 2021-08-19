@@ -289,9 +289,11 @@ input[type="checkbox"]:checked + label::before {
 }
 
 .modal .modal__close {
-  position: absolute;
-  right: 1.5rem;
-  top: 1.5rem;
+  position: fixed;
+  right: -webkit-calc((50% - 30rem) + 1.5rem);
+  right: calc((50% - 30rem) + 1.5rem);
+  top: -webkit-calc(50% - 13.5rem);
+  top: calc(50% - 13.5rem);
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -1057,8 +1059,11 @@ footer .footer__block .footer__address {
     height: -webkit-max-content;
     height: -moz-max-content;
     height: max-content;
+    max-height: -webkit-calc(100vh - 2rem);
+    max-height: calc(100vh - 2rem);
     left: 1rem;
-    top: 2rem;
+    top: 1rem;
+    overflow-y: auto;
   }
   .modal .modal__header {
     margin-top: 1.5rem;
@@ -1162,6 +1167,10 @@ footer .footer__block .footer__address {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .modal .modal__close {
+    right: 2.5rem;
+    top: 2.5rem;
   }
   nav {
     width: 100%;

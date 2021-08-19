@@ -215,9 +215,9 @@ input[type="checkbox"] {
         .modal__socials {}
     }
     .modal__close {
-        position: absolute;
-        right: 1.5rem;
-        top: 1.5rem;
+        position: fixed;
+        right: calc((50% - 30rem) + 1.5rem);
+        top: calc(50% - 13.5rem);
         display: flex;
         align-items: center;
         cursor: pointer;
@@ -719,9 +719,10 @@ footer {
         width: calc(100% - 2rem);
         // height: calc(100% - 4rem);
         height: max-content;
+        max-height: calc(100vh - 2rem);
         left: 1rem;
-        top: 2rem;
-
+        top: 1rem;
+        overflow-y: auto;
         .modal__header {
             margin-top: 1.5rem;
             font-size: 2rem;
@@ -779,6 +780,8 @@ footer {
             }
         }
         .modal__close {
+            right: 2.5rem;
+            top: 2.5rem;
             span {}
         }
     }
