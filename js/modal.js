@@ -9,7 +9,8 @@ for(let btn of modalBtns) {
             if (modal.getAttribute('data-type') === dataType) {
 
                 modal.classList.add('active');
-                overlay.classList.add('active')
+                overlay.classList.add('active');
+                document.body.classList.add("modal-active");
                 break;
             }
         }
@@ -20,8 +21,12 @@ let closeModal = () => {
     modal.classList.remove("active");
   }
   overlay.classList.remove("active");
+  document.body.classList.remove('modal-active');
 };
 
+overlay.addEventListener("click", () => {
+  closeModal();
+});
 
 let closeModalBtns = document.getElementsByClassName('modal__close');
 

@@ -25,6 +25,9 @@ $green2: #21A038;
 
 body {
     overflow-x: hidden;
+    &.modal-active {
+        overflow: hidden;
+    }
 }
 
 // BG SETTINGS
@@ -169,6 +172,7 @@ input[type="checkbox"] {
     height: 30rem;
     z-index: 100000;
     padding: 2rem;
+    
     .modal__header {
         font-size: 2.5rem;
         margin-bottom: 2rem;
@@ -200,7 +204,6 @@ input[type="checkbox"] {
             margin: 1rem 0;
         }
         .modal__form {
-            
             form {
                 display: flex;
                 flex-wrap: wrap;
@@ -210,9 +213,7 @@ input[type="checkbox"] {
                 }
             }
         }
-        .modal__socials {
-           
-        }
+        .modal__socials {}
     }
     .modal__close {
         position: absolute;
@@ -230,7 +231,6 @@ input[type="checkbox"] {
 
 .overlay {
     display: none;
-
     position: fixed;
     top: 0;
     left: 0;
@@ -239,7 +239,6 @@ input[type="checkbox"] {
     width: 100%;
     height: 100%;
     z-index: 1000;
-
     &.active {
         display: block;
     }
