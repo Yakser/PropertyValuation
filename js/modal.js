@@ -5,15 +5,13 @@ let overlay = document.getElementById('overlay');
 // открытие соответствующих модальных окон
 for(let btn of modalBtns) {
     btn.addEventListener('click', () => {
-        let dataType = btn.getAttribute('data-type');
-        for(let modal of modals) {
-            if (modal.getAttribute('data-type') === dataType) {
-                modal.classList.add('active');
-                overlay.classList.add('active');
-                document.body.classList.add("modal-active");
-                break;
-            }
-        }
+      let dataType = btn.getAttribute("data-type");
+      let modal = document.getElementById(dataType);
+
+      modal.classList.add("active");
+      overlay.classList.add('active');
+      document.body.classList.add("modal-active");
+      
     })
 };
 
