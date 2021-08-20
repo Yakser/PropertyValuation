@@ -857,6 +857,10 @@ main.report .report-block .report-types .report-type .report-type__caption span 
   margin-right: 1rem;
 }
 
+main.objects {
+  margin-bottom: 5rem;
+}
+
 main.objects .crumbs {
   display: -webkit-box;
   display: -webkit-flex;
