@@ -1171,6 +1171,9 @@ footer {
             h2 {
                 margin-bottom: 1rem;
             }
+            .crumbs {
+                margin: 0;
+            }
         }
         .bg-block {
             opacity: 1;
@@ -1292,7 +1295,6 @@ footer {
                 }
             }
         }
-
         .documents {
             p {
                 width: 100%;
@@ -1314,6 +1316,14 @@ footer {
 
 @media screen and (max-width: 445px) {
     main.objects {
+        .main__header-block .main__header-container {
+            
+            .crumbs {
+                span {
+                    margin: 0 .5rem;
+                }
+            }
+        }
         .report {
             .report-wrapper {
                 .report-block {
@@ -1327,7 +1337,8 @@ footer {
                             h3 {
                                 font-size: 3rem;
                             }
-                        } .report-block__table {
+                        }
+                        .report-block__table {
                             .row {
                                 span {
                                     font-size: 1.2rem;

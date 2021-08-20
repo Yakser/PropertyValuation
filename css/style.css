@@ -1711,6 +1711,9 @@ footer .footer__block .footer__address {
   main.objects .main__header-block .main__header-container h2 {
     margin-bottom: 1rem;
   }
+  main.objects .main__header-block .main__header-container .crumbs {
+    margin: 0;
+  }
   main.objects .bg-block {
     opacity: 1;
   }
@@ -1858,6 +1861,9 @@ footer .footer__block .footer__address {
 }
 
 @media screen and (max-width: 445px) {
+  main.objects .main__header-block .main__header-container .crumbs span {
+    margin: 0 .5rem;
+  }
   main.objects .report .report-wrapper .report-block:first-child {
     width: 22rem;
     height: 23.3rem;
