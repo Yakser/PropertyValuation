@@ -362,6 +362,7 @@ input[type="checkbox"]:checked + label::before {
 nav {
   width: 70%;
   height: 10vh;
+  min-height: 5rem;
   margin: 3rem auto;
   background: rgba(255, 255, 255, 0.75);
   -webkit-backdrop-filter: blur(10px);
@@ -1700,6 +1701,14 @@ footer .footer__block .footer__address {
   main.report .report-block .report-types .report-type {
     margin: 0;
     margin-bottom: 1rem;
+  }
+  main.objects .bg-block {
+    height: 15vh;
+  }
+  main.objects .bg-block img {
+    width: 150vw;
+    top: -35vw;
+    left: -25vw;
   }
   main.objects .main__header-block .main__header-container {
     -webkit-box-orient: vertical;

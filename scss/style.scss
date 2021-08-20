@@ -274,6 +274,7 @@ input[type="checkbox"] {
 nav {
     width: 70%;
     height: 10vh;
+    min-height: 5rem;
     margin: 3rem auto;
     background: rgba(255, 255, 255, 0.75);
     backdrop-filter: blur(10px);
@@ -1166,6 +1167,15 @@ footer {
         }
     }
     main.objects {
+        .bg-block {
+            // border: 1px solid red;
+            height: 15vh;
+            img {
+                width: 150vw;
+                top: -35vw;
+                left: -25vw;
+            }
+        }
         .main__header-block .main__header-container {
             flex-direction: column;
             h2 {
