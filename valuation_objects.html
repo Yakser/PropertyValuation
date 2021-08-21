@@ -96,7 +96,7 @@
                     <img src="img/curve-sm.svg" alt="" class="report-block__bg report-block__bg_sm" />
                 </div>
                 <div class="report-block">
-                    <div class="report-subblock">
+                    <div class="report-subblock js-open-modal" data-type="modal-report">
                         <span> Какие перепланировки <br> пройдут в банки, а какие нет? </span>
                         <img src="img/right-arrow.svg" alt="Right arrow" class="ico" />
                     </div>
@@ -116,6 +116,126 @@
 
     </main>
 
+    <div class="overlay" id="overlay"></div>
+
+    <div class="modal" id="modal-report">
+
+        <div class="modal__close">
+            <span>Закрыть</span>
+            <img src="img/close.svg" alt="" class="ico">
+        </div>
+
+        <div class="modal__report">
+            <div class="block">
+                <h4 class="modal__header">
+                    Отчет <span class="red">не пройдет</span>, если..
+                </h4>
+                <div class="wrapper">
+
+                    <ul class="list list-red">
+                        <li>
+                            <span class="mark"></span>
+                            <span class="text">Перенесли уборную и ванную комнату</span>
+                        </li>
+                        <li>
+                            <span class="mark"></span>
+                            <span class="text">Сделали непредусмотренную проектом лестницу внутри квартиры</span>
+                        </li>
+                        <li>
+                            <span class="mark"></span>
+                            <span class="text">Сделали проемы в несущих стенах и межквартирных перегородках</span>
+                        </li>
+                        <li>
+                            <span class="mark"></span>
+                            <span class="text">Создали, ликвидировали, изменили формы оконных и дверных проемов во внешних ограждающих конструкциях (стенах, крышах)</span>
+                        </li>
+                        <li>
+                            <span class="mark"></span>
+                            <span class="text">Пристроили балкон, лоджию и террасу к первому этажу</span>
+                        </li>
+                        <li>
+                            <span class="mark"></span>
+                            <span class="text">Добавили вентиляционных коробов на фасад многоквартирного дома</span>
+                        </li>
+                        <li>
+                            <span class="mark"></span>
+                            <span class="text">Изменили дымоход</span>
+                        </li>
+                        <li>
+                            <span class="mark"></span>
+                            <span class="text">Убрали или уменьшили каналы естественной вентиляции</span>
+                        </li>
+                        <li>
+                            <span class="mark"></span>
+                            <span class="text">Перенесли радиаторы отопления  на лоджию, балкон или веранду</span>
+                        </li>
+                        <li>
+                            <span class="mark"></span>
+                            <span class="text">Устройство лоджий и террас на вторых и выше этажах</span>
+                        </li>
+                        <li>
+                            <span class="mark"></span>
+                            <span class="text">Присоединили чердак, технический этаж</span>
+                        </li>
+                        <li>
+                            <span class="mark"></span>
+                            <span class="text">Перепланировали с захватом чужих площадей</span>
+                        </li>
+                    </ul>
+                    <span class="link mobile-element link-read-more">
+                        Подробнее..
+                    </span>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="block">
+                <h4 class="modal__header">
+                    Отчет <span class="green">пройдет</span>, если..
+                </h4>
+                <div class="wrapper">
+
+
+                    <ul class="list list-green">
+                        <li>
+                            <span class="mark"></span>
+                            <span class="text">Установили газовые приборы с прокладкой дополнительных подводящих сетей</span>
+                        </li>
+                        <li>
+                            <span class="mark"></span>
+                            <span class="text">Заменили газовую плиту на электрическую</span>
+                        </li>
+                        <li>
+                            <span class="mark"></span>
+                            <span class="text">Сделали теплый пол</span>
+                        </li>
+                        <li>
+                            <span class="mark"></span>
+                            <span class="text">Убрали не несущие стены</span>
+                        </li>
+                        <li>
+                            <span class="mark"></span>
+                            <span class="text">Добавили перегородок в домах с деревянными перекрытиями</span>
+                        </li>
+                        <li>
+                            <span class="mark"></span>
+                            <span class="text">Объединили лоджию (балконов) с внутренними помещениями без установки радиатора отопления</span>
+                        </li>
+                        <li>
+                            <span class="mark"></span>
+                            <span class="text">Разместили уборной, ванной (душевой) на втором уровне над кухней допускается в квартирах, расположенных в двух уровнях</span>
+                        </li>
+
+                    </ul>
+                    <span class="link mobile-element link-read-more">
+                        Подробнее..
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
     <footer class="footer">
         <div class="footer__block">
             <img src="img/logo.png" alt="Logo" class="logo" />
@@ -133,6 +253,8 @@
             <a href="#" class="btn btn-green">Заказать отчет</a>
         </div>
     </footer>
+    <script src='js/modal.js'></script>
+    <script src='js/valuation_objects.js'></script>
 </body>
 
 </html>

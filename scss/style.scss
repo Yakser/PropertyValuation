@@ -86,6 +86,23 @@ body {
     height: 100%;
 }
 
+.green {
+    color: $green;
+}
+
+.red {
+    color: $red;
+}
+
+.link {
+    text-decoration: underline;
+    color: $blue;
+    font-weight: 600;
+    &.link-read-more {
+        display: none;
+    }
+}
+
 .logo {
     width: 3.6rem;
     height: auto;
@@ -199,6 +216,28 @@ input[type="checkbox"] {
     height: 30rem;
     z-index: 100000;
     padding: 2rem;
+    &#modal-report {
+        width: 70rem;
+        height: 40rem;
+        left: calc(50% - 35rem);
+        top: calc(50% - 20rem);
+        .modal__close {
+            right: calc(50% - 35rem + 1.5rem);
+            top: calc(50% - 20rem + 1.5rem);
+        }
+    }
+    .modal__close {
+        position: fixed;
+        right: calc(50% - 30rem + 1.5rem);
+        top: calc(50% - 15rem + 1.5rem);
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        span {
+            margin-right: .5rem;
+            color: $red;
+        }
+    }
     .modal__header {
         font-size: 2.5rem;
         margin-bottom: 2rem;
@@ -241,16 +280,53 @@ input[type="checkbox"] {
         }
         .modal__socials {}
     }
-    .modal__close {
-        position: fixed;
-        right: calc((50% - 30rem) + 1.5rem);
-        top: calc(50% - 13.5rem);
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-        span {
-            margin-right: .5rem;
-            color: $red;
+    .modal__report {
+        display: grid;
+        grid-template-columns: 8fr 4rem 6fr;
+        margin-top: 1rem;
+        .line {
+            justify-self: center;
+            height: calc(100% + 4.5rem);
+            margin-top: -3rem;
+            border-left: 2px dashed $gray;
+        }
+        .block {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            .modal__header {
+                font-size: 2rem;
+                margin-top: 1rem;
+            }
+            .list {
+                display: flex;
+                flex-direction: column;
+                &.list-red {
+                    li .mark {
+                        background-color: $red;
+                        border: 2px solid $red;
+                    }
+                }
+                &.list-green li .mark {
+                    background-color: $green;
+                    border: 2px solid $green;
+                }
+                li {
+                    display: flex;
+                    align-items: baseline;
+                    margin-bottom: .7rem;
+                    .mark {
+                        width: .5rem;
+                        height: .5rem;
+                        border-radius: 50%;
+                        margin-right: 1rem;
+                        flex-shrink: 0;
+                    }
+                    .text {
+                        font-weight: 500;
+                    }
+                }
+            }
         }
     }
 }
@@ -911,6 +987,16 @@ footer {
             }
         }
     }
+    .modal#modal-report {
+        width: 50rem;
+        height: 50rem;
+        left: calc(50% - 25rem);
+        top: calc(50% - 25rem);
+        .modal__close {
+            right: calc(50% - 25rem + 1.5rem);
+            top: calc(50% - 25rem + 1.5rem);
+        }
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -1070,6 +1156,18 @@ footer {
             right: 2.5rem;
             top: 2.5rem;
             span {}
+        }
+    }
+    .modal#modal-report {
+        width: calc(100% - 2rem);
+        height: max-content;
+        max-height: calc(100vh - 2rem);
+        left: 1rem;
+        top: 1rem;
+        overflow-y: auto;
+        .modal__close {
+            right: 2.5rem;
+            top: 2.5rem;
         }
     }
     nav {
@@ -1266,6 +1364,39 @@ footer {
             }
         }
     }
+    .modal#modal-report {
+        overflow-y: hidden;
+        .modal__report {
+            display: flex;
+            flex-direction: column;
+            .block {
+                .wrapper {
+                    background-color: #FBFBFB;
+                    width: calc(100% + 4rem);
+                    padding: 2rem;
+                    .link {
+                        display: flex;
+                        margin-top: 1rem;
+                    }
+                    .list {
+                        max-height: 10rem;
+                        transition: .3s ease-in;
+                        overflow-y: auto;
+                        li {
+                            display: none;
+                        }
+                        li:nth-child(1), li:nth-child(2) {
+                            display: flex;
+                        }
+                    }
+                }
+                margin-bottom: 2rem;
+            }
+            .line {
+                display: none;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 540px) {
@@ -1327,7 +1458,6 @@ footer {
 @media screen and (max-width: 445px) {
     main.objects {
         .main__header-block .main__header-container {
-            
             .crumbs {
                 span {
                     margin: 0 .5rem;
