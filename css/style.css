@@ -209,6 +209,41 @@ body.modal-active {
   color: #D7D7D7;
 }
 
+.input-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.input-block label {
+  margin-bottom: 1rem;
+}
+
+.input-block label span {
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.input-block label span.hint {
+  color: #D7D7D7;
+}
+
+.input-block .input {
+  width: 100%;
+  height: auto;
+}
+
+.input-block .input input {
+  padding: .5rem 1rem;
+}
+
 input[type="checkbox"] {
   position: absolute;
   z-index: -1000;
@@ -245,6 +280,113 @@ input[type="checkbox"] + label::before {
 
 input[type="checkbox"]:checked + label::before {
   background-color: #75CD9B;
+}
+
+.select {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.5rem;
+  width: 100%;
+  padding: .5rem 1rem;
+}
+
+.select.is-active .select__header img {
+  -webkit-transform: scaleY(-1);
+      -ms-transform: scaleY(-1);
+          transform: scaleY(-1);
+}
+
+.select.is-active .select__body {
+  display: block;
+}
+
+.select .select__header {
+  width: 100%;
+  cursor: pointer;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.select .select__header img {
+  width: 2rem;
+  height: 2rem;
+  -webkit-transition: .2s ease-in;
+  -o-transition: .2s ease-in;
+  transition: .2s ease-in;
+}
+
+.select .select__body {
+  display: none;
+  position: absolute;
+  left: -webkit-calc(-.5rem - 2px);
+  left: calc(-.5rem - 2px);
+  top: -webkit-calc(100% - .2rem);
+  top: calc(100% - .2rem);
+  z-index: 100;
+  -webkit-border-radius: 0 0 16px 16px;
+          border-radius: 0 0 16px 16px;
+  height: 7rem;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: -webkit-calc(100% + 1rem + 4px);
+  width: calc(100% + 1rem + 4px);
+  border: 2px solid #D7D7D7;
+  border-top: none;
+  background-color: #fff;
+}
+
+.select .select__body::-webkit-scrollbar {
+  width: .25rem;
+  -webkit-border-radius: 16px;
+          border-radius: 16px;
+}
+
+.select .select__body::-webkit-scrollbar-track {
+  background: transparent;
+  -webkit-border-radius: 16px;
+          border-radius: 16px;
+  margin: .5rem 0;
+}
+
+.select .select__body::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10000px;
+          border-radius: 10000px;
+  background-color: #477ABC;
+}
+
+.select .select__item {
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: .5rem 1rem;
+  padding-left: 1.5rem;
+  -webkit-transition: .2s ease-in;
+  -o-transition: .2s ease-in;
+  transition: .2s ease-in;
+}
+
+.select .select__item:hover {
+  background-color: #FBFBFB;
 }
 
 .modal {
@@ -284,6 +426,30 @@ input[type="checkbox"]:checked + label::before {
   right: calc(50% - 35rem + 1.5rem);
   top: -webkit-calc(50% - 20rem + 1.5rem);
   top: calc(50% - 20rem + 1.5rem);
+}
+
+.modal#modal-valuation {
+  width: 30rem;
+  height: 45rem;
+  left: -webkit-calc(50% - 15rem);
+  left: calc(50% - 15rem);
+  top: -webkit-calc(50% - 22.5rem);
+  top: calc(50% - 22.5rem);
+}
+
+.modal#modal-valuation .modal__header {
+  margin-top: 2rem;
+}
+
+.modal#modal-valuation .modal__close {
+  right: -webkit-calc(50% - 15rem + 1.5rem);
+  right: calc(50% - 15rem + 1.5rem);
+  top: -webkit-calc(50% - 22.5rem + 1.5rem);
+  top: calc(50% - 22.5rem + 1.5rem);
+}
+
+.modal#modal-valuation .modal__form form input[type='submit'] {
+  width: 100%;
 }
 
 .modal .modal__close {
@@ -2010,7 +2176,8 @@ footer .footer__block .footer__address {
   .modal#modal-report .modal__report .block .wrapper .list li {
     display: none;
   }
-  .modal#modal-report .modal__report .block .wrapper .list li:nth-child(1), .modal#modal-report .modal__report .block .wrapper .list li:nth-child(2) {
+  .modal#modal-report .modal__report .block .wrapper .list li:nth-child(1),
+  .modal#modal-report .modal__report .block .wrapper .list li:nth-child(2) {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -2058,6 +2225,35 @@ footer .footer__block .footer__address {
   main.objects .documents p {
     width: 100%;
   }
+  .modal#modal-valuation {
+    width: 25rem;
+    height: 38rem;
+    left: -webkit-calc(50% - 12.5rem);
+    left: calc(50% - 12.5rem);
+    top: -webkit-calc(50% - 19rem);
+    top: calc(50% - 19rem);
+  }
+  .modal#modal-valuation .modal__header {
+    margin: 1rem 0;
+    text-align: center;
+  }
+  .modal#modal-valuation .modal__form form .input-block {
+    margin-bottom: 1.5rem;
+  }
+  .modal#modal-valuation .modal__form form .input-block label {
+    margin-bottom: 0.5rem;
+  }
+  .modal#modal-valuation .modal__form form input[type='submit'] {
+    padding: 0;
+    width: 100%;
+    min-width: 100%;
+  }
+  .modal#modal-valuation .modal__close {
+    right: -webkit-calc(50% - 12.5rem + 1.5rem);
+    right: calc(50% - 12.5rem + 1.5rem);
+    top: -webkit-calc(50% - 19rem + 1.5rem);
+    top: calc(50% - 19rem + 1.5rem);
+  }
 }
 
 @media screen and (max-width: 485px) {
@@ -2088,6 +2284,35 @@ footer .footer__block .footer__address {
   }
   main.objects .report .report-wrapper .report-block:last-child {
     width: 20rem;
+  }
+  .modal#modal-valuation {
+    width: 22rem;
+    height: 38rem;
+    left: -webkit-calc(50% - 11rem);
+    left: calc(50% - 11rem);
+    top: -webkit-calc(50% - 19rem);
+    top: calc(50% - 19rem);
+  }
+  .modal#modal-valuation .modal__header {
+    margin: 1rem 0;
+    text-align: center;
+  }
+  .modal#modal-valuation .modal__form form .input-block {
+    margin-bottom: 1.5rem;
+  }
+  .modal#modal-valuation .modal__form form .input-block label {
+    margin-bottom: 0.5rem;
+  }
+  .modal#modal-valuation .modal__form form input[type='submit'] {
+    padding: 0;
+    width: 100%;
+    min-width: 100%;
+  }
+  .modal#modal-valuation .modal__close {
+    right: -webkit-calc(50% - 11rem + 1.5rem);
+    right: calc(50% - 11rem + 1.5rem);
+    top: -webkit-calc(50% - 19rem + 1.5rem);
+    top: calc(50% - 19rem + 1.5rem);
   }
 }
 
