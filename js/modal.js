@@ -8,6 +8,7 @@ for(let btn of modalBtns) {
       let dataType = btn.getAttribute("data-type");
       let modal = document.getElementById(dataType);
 
+      closeModal();
       modal.classList.add("active");
       overlay.classList.add('active');
       document.body.classList.add("modal-active");

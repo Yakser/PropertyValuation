@@ -158,7 +158,7 @@ body {
     border-radius: 12px;
     width: 20rem;
     img {
-        margin-right: 1rem;
+        margin-right: 0rem;
     }
     input {
         font-size: 1.2rem;
@@ -310,8 +310,11 @@ input[type="checkbox"] {
     border-radius: 36px;
     width: 60rem;
     height: 30rem;
-    z-index: 100000;
+    z-index: 1000;
     padding: 2rem;
+    .modal__desc {
+        font-size: 1.2rem;
+    }
     &#modal-report {
         width: 70rem;
         height: 40rem;
@@ -342,10 +345,141 @@ input[type="checkbox"] {
             }
         }
     }
+    &#modal-valuation-result {
+        width: 50rem;
+        height: 30rem;
+        left: calc(50% - 25rem);
+        top: calc(50% - 15rem);
+        .modal__header {
+            // margin: 1.5rem 0;
+        }
+        .modal__close {
+            right: calc(50% - 25rem + 1.5rem);
+            top: calc(50% - 15rem + 1.5rem);
+        }
+        .modal__desc {
+            display: block;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+        .modal__form {
+            form {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                justify-content: space-between;
+                .input-block {
+                    margin: 0;
+                    label {
+                        font-weight: 500;
+                        font-size: 1.2rem;
+                    }
+                }
+                .input-block:nth-child(3) {
+                    flex-shrink: 0;
+                    flex-grow: 1;
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin: .5rem 0;
+                    label::before {
+                        top: .25rem;
+                    }
+                }
+                input[type='submit'] {
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+    &#modal-valuation-ticket {
+        background-color: transparent;
+        border: none;
+        padding: 1rem;
+        box-shadow: 0;
+        width: 47rem;
+        height: 31.5rem;
+        left: calc(50% - 23.5rem);
+        top: calc(50% - 15.75rem);
+        .modal__bg {
+            position: absolute;
+            width: calc(100% + 3rem);
+            left: -1.5rem;
+            top: 0;
+            filter: drop-shadow(0px 4px 26px rgba(0, 0, 0, 0.1));
+            z-index: -100;
+        }
+        .modal__bg.mobile-element {
+            display: none;
+        }
+        .line {
+            display: block;
+            position: absolute;
+            left: 0;
+            top: 13.75rem;
+            width: 100%;
+            border-top: 2px dashed #D7D7D7;
+        }
+        .ticket {
+            margin-top: 10rem;
+            border-radius: 20px;
+            background: #F9F9F9;
+            border: 2px solid #EEEEEE;
+            padding: 1rem;
+            .ticket__type {
+                display: block;
+                width: max-content;
+                padding: .8rem 1.5rem;
+                background-color: $blue;
+                border-radius: 12px;
+                color: #fff;
+                font-weight: 500;
+                margin-bottom: 2rem;
+            }
+            .ticket__table {
+                display: flex;
+                flex-direction: column;
+                .row {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 0.5rem;
+                    span {
+                        font-size: 1.5rem;
+                        flex-shrink: 0;
+                        &:first-child {
+                            margin-right: 1rem;
+                        }
+                        &:last-child {
+                            margin-left: 1rem;
+                            font-weight: 600;
+                        }
+                    }
+                    .line {
+                        flex-grow: 1;
+                        margin: 0;
+                        width: 100%;
+                        min-width: 1rem;
+                        position: initial;
+                        border-top: 2px dashed #D7D7D7;
+                    }
+                }
+            }
+        }
+        .modal__header {
+            font-size: 2.5rem;
+            margin: 2rem 0;
+        }
+    }
+    .modal__header {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+    }
     .modal__close {
         position: fixed;
-        right: calc(50% - 30rem + 1.5rem);
-        top: calc(50% - 15rem + 1.5rem);
+        right: calc(50% - 25rem + 3rem);
+        top: calc(50% - 15.75rem + 1.5rem);
         display: flex;
         align-items: center;
         cursor: pointer;
@@ -353,10 +487,6 @@ input[type="checkbox"] {
             margin-right: .5rem;
             color: $red;
         }
-    }
-    .modal__header {
-        font-size: 2.5rem;
-        margin-bottom: 2rem;
     }
     .modal__desc {
         font-size: 1.2rem;
@@ -1286,6 +1416,26 @@ footer {
             top: 2.5rem;
         }
     }
+    .modal#modal-valuation-ticket {
+        left: calc(50% - 23.5rem);
+        top: calc(50% - 15.75rem);
+        overflow: visible;
+        .modal__close {
+            right: calc(50% - 23.5rem + 3rem);
+            top: calc(50% - 15.75rem + 1.5rem);
+        }
+    }
+    .modal#modal-valuation-result {
+        .modal__header {
+            // margin: 1.5rem 0;
+        }
+        .modal__close {}
+        .modal__desc {
+            text-align: left;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+        }
+    }
     nav {
         width: 100%;
         margin: 0;
@@ -1339,6 +1489,56 @@ footer {
     main.report {
         .report-block {
             width: 85%;
+        }
+    }
+    .modal#modal-valuation-result {
+        width: 45rem;
+        height: 30rem;
+        left: calc(50% - 22.5rem);
+        top: calc(50% - 15rem);
+        .modal__header {
+            margin: 1.5rem 0;
+        }
+        .modal__close {
+            right: calc(50% - 22.5rem + 1.5rem);
+            top: calc(50% - 15rem + 1.5rem);
+        }
+        .modal__desc {
+            margin-bottom: 1.5rem;
+        }
+    }
+    .modal#modal-valuation-ticket {
+        width: 30rem;
+        height: max-content;
+        left: calc(50% - 15rem);
+        top: calc(50% - 15.75rem);
+        overflow: visible;
+        .modal__close {
+            right: calc(50% - 15rem);
+            top: calc(50% - 15.75rem + 1.5rem);
+        }
+        .modal__header {
+            margin-top: 3rem;
+            margin-bottom: 0;
+            font-size: 2rem;
+        }
+        .line {
+            top: 9rem;
+        }
+        .ticket {
+            width: calc(100% + 2rem);
+            margin-left: -1rem;
+            margin-top: 3.5rem;
+            .ticket__type {
+                margin: 0;
+            }
+            .ticket__table {
+                .row {
+                    span {
+                        font-size: 1.2rem;
+                    }
+                }
+            }
         }
     }
 }
@@ -1514,6 +1714,38 @@ footer {
             }
         }
     }
+    .modal#modal-valuation-result {
+        width: 30rem;
+        height: 40rem;
+        left: calc(50% - 15rem);
+        top: calc(50% - 20rem);
+        .modal__header {
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+        .modal__close {
+            right: calc(50% - 15rem + 1.5rem);
+            top: calc(50% - 20rem + 1.5rem);
+        }
+        .modal__desc {
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        .modal__form {
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .input-block {
+                    margin: 0;
+                    margin-bottom: 1rem;
+                    label {
+                        margin-bottom: 0.25rem;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 540px) {
@@ -1586,6 +1818,103 @@ footer {
         .modal__close {
             right: calc(50% - 12.5rem + 1.5rem);
             top: calc(50% - 19rem + 1.5rem);
+        }
+    }
+    .modal#modal-valuation-result {
+        width: 23rem;
+        height: 40rem;
+        left: calc(50% - 11.5rem);
+        top: calc(50% - 20rem);
+        .modal__header {
+            font-size: 1.7rem;
+            margin: 1.5rem 0;
+        }
+        .modal__close {
+            right: calc(50% - 11.5rem + 1.5rem);
+            top: calc(50% - 20rem + 1.5rem);
+        }
+        .modal__desc {
+            font-size: 1.2rem;
+            text-align: center;
+        }
+        .modal__form {
+            form {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .input-block {
+                    margin: 0;
+                    margin-bottom: 1rem;
+                    label {
+                        margin-bottom: 0.25rem;
+                    }
+                }
+                input[type='submit'] {
+                    min-width: 10rem;
+                }
+            }
+        }
+    }
+    .modal#modal-valuation-ticket {
+        width: 20rem;
+        height: 30rem;
+        left: calc(50% - 10rem);
+        top: calc(50% - 15rem);
+        overflow: visible;
+        .modal__bg:not(.mobile-element) {
+            display: none;
+        }
+        .modal__bg.mobile-element {
+            display: block;
+            width: 22rem;
+            left: -1rem;
+        }
+        .modal__close {
+            right: calc(50% - 11rem + 2.5rem);
+            top: calc(50% - 15rem + 1.5rem);
+        }
+        .modal__header {
+            margin-top: 3rem;
+            margin-bottom: 0;
+            font-size: 2rem;
+            text-align: center;
+        }
+        .line {
+            top: 11rem;
+            width: calc(100% - 1rem);
+            margin-left: 0.5rem;
+        }
+        .ticket {
+            width: calc(100% + 2rem);
+            margin-left: -1rem;
+            margin-top: 3.5rem;
+            .ticket__type {
+                margin: 0;
+                margin-bottom: 2rem;
+            }
+            .ticket__table {
+                .row {
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    width: 100%;
+                    align-items: flex-start;
+                    &:first-child {
+                        margin-bottom: 2rem;
+                    }
+                    .line {
+                        display: none;
+                    }
+                    span {
+                        margin: 0;
+                        &:first-child {
+                            margin-bottom: 0.5rem;
+                        }
+                        &:last-child {
+                            margin: 0;
+                        }
+                    }
+                }
+            }
         }
     }
 }
