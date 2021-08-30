@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Оценка недвижимости</title>
+
+    <!-- ico -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap" rel="stylesheet" />
+    <!-- styles -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/cal.css" />
+</head>
+
+<body>
+    <!-- <div class="bg-gradient"></div>
+    <img src="img/bg-left.png" alt="" class="bg bg-left">
+    <img src="img/bg1.png" alt="" class="bg bg-right"> -->
+
+    <nav class="nav">
+        <div class="nav__mobile">
+            <img src="img/logo.png" alt="" class="logo" />
+            <h2 class="nav__header">ООО “Оценка собсвтенности”</h2>
+            <img src="img/menu.svg" alt="" class="ico nav__menu" id="menu-btn" />
+        </div>
+        <div class="nav__block">
+            <img src="img/logo.png" alt="" class="logo" />
+            <ul class="nav__menu">
+                <li><a href="#">Главная</a></li>
+                <li>
+                    <img src="img/menu.svg" alt="Меню" class="ico" />
+                    <a href="#">Услуги</a>
+                </li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+
+        <div class="nav__block">
+            <ul class="nav__socials">
+                <li>
+                    <img src="img/location.svg" alt="Меню" class="ico" />
+                    <a href="#">г. Саратов, ул. Кутякова, д.5</a>
+                </li>
+                <li>
+                    <img src="img/phone.svg" alt="Меню" class="ico" />
+                    <a href="tel:884523250900">8(8452) 32-50-900</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="payment-u payment">
+
+        <div class="main__header-block">
+            <div class="main__header-container">
+                <h2 class="main__header main__header_dark"> Оплата не прошла :(</h2>
+                <span class="main__desc">Желаете повторить попытку?</span>
+
+            </div>
+        </div>
+
+
+
+        <div class="order-block">
+
+            <div class="ticket-block">
+                <div class="ticket__img">
+                    <img src="img/house.jpg" alt="">
+                    <div class="gradient"></div>
+                </div>
+
+                <div class="ticket">
+                    <div class="ticket__header">
+                        <h4>Обьекты оценки</h4>
+                        <div class="crumbs">
+                            <div class="crumb">Дача / дом</div>
+                            <span>+</span>
+                            <div class="crumb">Земельный участок</div>
+                        </div>
+                    </div>
+                    <div class="ticket__table">
+                        <span class="ticket__table-header">Цена и время</span>
+                        <div class="row">
+                            <span>Стоимость оценки</span>
+                            <div class="line"></div>
+                            <span>3000 рублей</span>
+                        </div>
+                        <div class="row">
+                            <span>Тех. паспорт</span>
+                            <div class="line"></div>
+                            <span>2 500 рублей</span>
+                        </div>
+                        <div class="row">
+                            <span>Срок</span>
+                            <div class="line"></div>
+                            <span>от 1 дней</span>
+                        </div>
+                        <div class="row">
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
+
+            <div class="form-block">
+                <div class="summary">
+                    <p>Сумма оплаты</p>
+                    <span>5 500 рублей</span>
+                </div>
+                <form action="">
+
+                    <div class="input-block name-payment">
+                        <label for="name-payment">Имя покупателя</label>
+                        <div class="input">
+                            <input id="name-payment" name="name-payment" type="text" placeholder="Ваше имя">
+                        </div>
+                    </div>
+
+                    <div class="input-block phone-payment">
+                        <label for="phone-payment">Номер телефона</label>
+                        <div class="input input-tel">
+                            <img src="img/phone.svg" alt="" class="ico">
+                            <input id="phone-payment" name="phone-payment" type="tel" maxlength="50" required value="+7(___)___-__-__" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" placeholder="+7(___)___-__-__">
+                        </div>
+                    </div>
+                    <div class="input-block address-payment">
+                        <label for="address-payment">Адрес обьекта</label>
+                        <div class="input">
+                            <input id="address-payment" name="address-payment" type="text" placeholder="Адрес обьекта">
+                        </div>
+                    </div>
+                    <div class="input-block email-payment">
+                        <label for="email-payment">Email</label>
+                        <div class="input">
+                            <img src="img/email.svg" alt="" class="ico">
+                            <input id="email-payment" name="email-payment" type="email" placeholder="Ваш Email" required>
+                        </div>
+                    </div>
+                    <div class="input-block comment-payment">
+                        <label for="comment-payment">Комментарий к заказу</label>
+                        <div class="input">
+                            <input id="comment-payment" name="comment-payment" type="text">
+                        </div>
+                    </div>
+
+                    <a href="#" class="btn btn-green">Перейти к оплате</a>
+
+                </form>
+            </div>
+
+        </div>
+
+
+    </main>
+
+    <div class="overlay" id="overlay"></div>
+
+    <footer class=" footer ">
+        <div class="footer__block ">
+            <img src="img/logo.png " alt="Logo " class="logo " />
+            <span class="footer__header ">Оценка собственности</span>
+            <div class="footer__right-block ">
+                <span class="footer__header "><a href="tel:884523250900 ">8(8452) 32-50-900</a></span
+          >
+          <span class="footer__address "> г. Саратов, ул. Кутякова, д.5 </span>
+            </div>
+        </div>
+        <div class="footer__block ">
+            <a href="# " class="btn btn-blue ">Услуги</a>
+            <span class="footer__copyright "> все права защищены </span>
+
+            <a href="# " class="btn btn-green ">Заказать отчет</a>
+        </div>
+    </footer>
+
+    <script src='js/modal.js'></script>
+    <script src='js/calendar.js'></script>
+
+
+</body>
+
+</html>
