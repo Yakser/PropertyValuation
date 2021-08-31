@@ -1198,8 +1198,17 @@ main .main__banks .main__bank-block img {
   opacity: 0.5;
 }
 
+main.main .main__header {
+  margin: 2rem 0;
+  margin-bottom: 4rem;
+}
+
 main.banks {
   margin-bottom: 5rem;
+}
+main.banks .main__header {
+  margin: 2rem 0;
+  margin-bottom: 4rem;
 }
 main.banks .main__desc {
   margin: 0;

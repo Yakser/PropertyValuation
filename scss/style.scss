@@ -1261,7 +1261,18 @@ main {
     }
 }
 
+main.main {
+    .main__header {
+        margin: 2rem 0;
+        margin-bottom: 4rem;
+    }
+}
+
 main.banks {
+    .main__header {
+        margin: 2rem 0;
+        margin-bottom: 4rem;
+    }
     margin-bottom: 5rem;
     .main__desc {
         margin: 0;
@@ -2425,8 +2436,8 @@ footer {
                         .crumbs {
                             display: flex;
                             flex-direction: column;
-                            align-items:center;
-                            justify-content:center;
+                            align-items: center;
+                            justify-content: center;
                             margin-bottom: 1rem;
                         }
                     }
