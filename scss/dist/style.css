@@ -1313,7 +1313,7 @@ main.report .report-block .report-types .report-type .report-type__img {
   overflow: hidden;
   position: relative;
 }
-main.report .report-block .report-types .report-type .report-type__img \ img {
+main.report .report-block .report-types .report-type .report-type__img img {
   width: 100%;
 }
 main.report .report-block .report-types .report-type .report-type__caption {
