@@ -2318,7 +2318,7 @@ main.business .val-block .target .target__list {
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 
 main.business .val-block .target .target__list .input-block {

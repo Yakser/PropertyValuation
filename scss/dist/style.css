@@ -1409,7 +1409,7 @@ main.business .val-block .target .target__list {
   flex-direction: column;
   flex-grow: 1;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }
 main.business .val-block .target .target__list .input-block {
   margin: 0;
