@@ -2254,7 +2254,7 @@ main.business .val-block .objects .objects__item .target {
   display: none;
 }
 
-main.business .val-block .objects .objects__item span {
+main.business .val-block .objects .objects__item span:not(.btn) {
   font-size: 1.2rem;
   font-weight: 300;
   text-align: center;
@@ -3391,10 +3391,11 @@ footer .footer__block .footer__address {
     margin-bottom: 1rem;
   }
   main.business .val-block .objects .objects__item.selected .target .btn {
-    margin-left: -1rem;
+    margin-left: -webkit-calc(-1rem - 2px);
+    margin-left: calc(-1rem - 2px);
     margin-bottom: -2px;
-    width: -webkit-calc(100% + 2rem);
-    width: calc(100% + 2rem);
+    width: -webkit-calc(100% + 2rem + 4px);
+    width: calc(100% + 2rem + 4px);
   }
   main.business .val-block .target {
     width: -webkit-calc(100% - 2rem);

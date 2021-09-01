@@ -1375,7 +1375,7 @@ main.business .val-block .objects .objects__item {
 main.business .val-block .objects .objects__item .target {
   display: none;
 }
-main.business .val-block .objects .objects__item span {
+main.business .val-block .objects .objects__item span:not(.btn) {
   font-size: 1.2rem;
   font-weight: 300;
   text-align: center;
@@ -2148,9 +2148,9 @@ main.payment .main__header-block {
     margin-bottom: 1rem;
   }
   main.business .val-block .objects .objects__item.selected .target .btn {
-    margin-left: -1rem;
+    margin-left: calc(-1rem - 2px);
     margin-bottom: -2px;
-    width: calc(100% + 2rem);
+    width: calc(100% + 2rem + 4px);
   }
   main.business .val-block .target {
     width: calc(100% - 2rem);
