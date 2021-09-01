@@ -3392,6 +3392,7 @@ footer .footer__block .footer__address {
   }
   main.business .val-block .objects .objects__item.selected .target .btn {
     margin-left: -1rem;
+    margin-bottom: -2px;
     width: -webkit-calc(100% + 2rem);
     width: calc(100% + 2rem);
   }

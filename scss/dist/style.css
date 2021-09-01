@@ -2149,6 +2149,7 @@ main.payment .main__header-block {
   }
   main.business .val-block .objects .objects__item.selected .target .btn {
     margin-left: -1rem;
+    margin-bottom: -2px;
     width: calc(100% + 2rem);
   }
   main.business .val-block .target {
