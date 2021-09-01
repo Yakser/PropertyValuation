@@ -1395,6 +1395,102 @@ main.report {
     }
 }
 
+main.business {
+    padding-left: 5rem;
+    .main__desc {
+        color: $black;
+        display: block;
+        width: 70%;
+        max-width: 100%;
+        text-align: left;
+        margin: 0;
+        margin-bottom: 2rem;
+    }
+    .main__header-block {
+        padding-left: 0;
+    }
+    .main__header-container {
+        h2 {
+            width: 100%;
+            text-align: left;
+        }
+    }
+    .val-block {
+        display: flex;
+        justify-content: space-between;
+        width: 70%;
+        border-bottom: 2px dashed $gray;
+        padding-bottom: 4rem;
+        .objects {
+            display: flex;
+            flex-direction: column;
+            .objects__item {
+                .target {
+                    display: none;
+                }
+                width: 16rem;
+                height: 4rem;
+                display: flex;
+                padding: .5rem;
+                justify-content: center;
+                align-items: center;
+                background: #FFFFFF;
+                box-shadow: 0px 4px 26px rgba(0,
+                0,
+                0,
+                0.1);
+                border-radius: 12px;
+                transition: background .3s ease-in;
+                margin-bottom: 2rem;
+                cursor: pointer;
+                span {
+                    font-size: 1.2rem;
+                    font-weight: 300;
+                    text-align: center;
+                    transition: color .3s ease-in;
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                &:hover,
+                &.selected {
+                    background: #2F89CE;
+                    span {
+                        color: white;
+                    }
+                }
+            }
+        }
+        .target {
+            background: #FFFFFF;
+            box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            padding: 2rem 3rem;
+            display: flex;
+            flex-direction: column;
+            .target__text {
+                display: block;
+                font-weight: 600;
+                font-size: 1.2rem;
+                margin-bottom: 2rem;
+            }
+            .target__list {
+                display: flex;
+                flex-direction: column;
+                flex-grow: 1;
+                justify-content: space-between;
+                margin-bottom: 1rem;
+                .input-block {
+                    margin: 0;
+                    label {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
 main.objects {
     margin-bottom: 5rem;
     .report {
@@ -1800,12 +1896,36 @@ footer {
             width: 80%;
         }
     }
+    main.business {
+        .main__desc {
+            width: 80%;
+        }
+        .main__header-block {
+            padding-left: 0;
+            width: 80%;
+        }
+        .val-block {
+            width: 80%;
+        }
+    }
 }
 
 @media screen and (max-width: 1500px) {
     nav {
         width: 90%;
         padding: 0 3rem;
+    }
+    main.business {
+        .main__desc {
+            width: 90%;
+        }
+        .main__header-block {
+            padding-left: 0;
+            width: 90%;
+        }
+        .val-block {
+            width: 90%;
+        }
     }
     main.payment-u.payment {
         .main__header-block {
@@ -2102,6 +2222,90 @@ footer {
 @media screen and (max-width: 1024px) {
     .bg-gradient {
         height: 220vh;
+    }
+    main.business {
+        padding-left: 0;
+        .main__desc {
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        .val-block {
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            .objects {
+                width: calc(100% - 2rem);
+                margin-bottom: 2rem;
+                .objects__item {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    &.selected {
+                        padding: 0;
+                        height: max-content;
+                        position: relative;
+                        .objects__title {
+                            margin: 1rem 0;
+                        }
+                        background: linear-gradient(#2F89CE,
+                        #2F89CE) padding-box,
+                        linear-gradient(180deg,
+                        rgba(47, 137, 206, 1) 0%,
+                        rgba(33, 160, 56, 1) 100%) border-box;
+                        border: 3px solid transparent;
+                        border-radius: 12px;
+                        .objects__title {
+                            width: 100%;
+                            margin-top: 1rem;
+                            font-weight: 500;
+                            // margin: 1rem 0;
+                            background-color: #2F89CE;
+                
+                            border-radius: 12px;
+                            position: absolute;
+                            padding: 1rem 0;
+                            left: 0;
+                            top: 0;
+                            margin: 0;
+                            z-index: 3;
+                        }
+                        .target {
+                            display: flex;
+                            width: 100%;
+                            z-index: 2;
+                            padding: 0 1rem;
+                            margin-top: 3rem;
+                            border-top-left-radius: 0;
+                            border-top-right-radius: 0;
+                            .target__text {
+                                color: $black;
+                                font-size: 1.5rem;
+                                font-weight: 600;
+                                margin: 0;
+                                margin-top: 1rem;
+                            }
+                            .target__list {
+                                margin: 2rem 0;
+                                .input-block {
+                                    margin-bottom: 1rem;
+                                }
+                            }
+                            .btn {
+                                // position: absolute;
+                                // left: 0;
+                                // bottom: 0;
+                                margin-left: -1rem;
+                                width: calc(100% + 2rem);
+                            }
+                        }
+                    }
+                }
+            }
+            .target {
+                width: calc(100% - 2rem);
+                display: none;
+            }
+        }
     }
     main.main {
         .main__desc,

@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Оценка недвижимости</title>
+
+    <!-- ico -->
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;700&display=swap" rel="stylesheet" />
+    <!-- styles -->
+    <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body>
+    <!-- <div class="bg-gradient"></div>
+    <img src="img/bg-left.png" alt="" class="bg bg-left">
+    <img src="img/bg1.png" alt="" class="bg bg-right"> -->
+
+    <nav class="nav">
+        <div class="nav__mobile">
+            <img src="img/logo.png" alt="" class="logo" />
+            <h2 class="nav__header">ООО “Оценка собственности”</h2>
+            <img src="img/menu.svg" alt="" class="ico nav__menu" id="menu-btn" />
+        </div>
+        <div class="nav__block">
+            <img src="img/logo.png" alt="" class="logo" />
+            <ul class="nav__menu">
+                <li><a href="#">Главная</a></li>
+                <li>
+                    <img src="img/menu.svg" alt="Меню" class="ico" />
+                    <a href="#">Услуги</a>
+                </li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+        </div>
+
+        <div class="nav__block">
+            <ul class="nav__socials">
+                <li>
+                    <img src="img/location.svg" alt="Меню" class="ico" />
+                    <a href="#">г. Саратов, ул. Кутякова, д.5</a>
+                </li>
+                <li>
+                    <img src="img/phone.svg" alt="Меню" class="ico" />
+                    <a href="tel:884523250900">8(8452) 32-50-900</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="business">
+
+        <div class="main__header-block">
+            <div class="main__header-container">
+                <h2 class="main__header main__header_dark">
+                    Оценка бизнеса, активов
+                </h2>
+            </div>
+        </div>
+        <div class="main__desc">
+            Что будем оценивать?
+        </div>
+        <div class="val-block">
+
+            <div class="objects js-list" id="list-objects">
+                <div class="selected objects__item" data-list="list-objects">
+                    <span class="objects__title">Недвижимость</span>
+                    <div class="target">
+                        <span class="target__text">
+                            Выберите цель оценки
+                        </span>
+                        <div class="target__list">
+
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m1-target-1">
+                                <label for="m1-target-1">Привлечение финансирования</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m1-target-2">
+                                <label for="m1-target-2">Корпоративные процедуры</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m1-target-3">
+                                <label for="m1-target-3">Управленческие решения</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m1-target-4">
+                                <label for="m1-target-4">До судебные и судебные споры</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m1-target-5">
+                                <label for="m1-target-5">Совершение сделок</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m1-target-6">
+                                <label for="m1-target-6">Корректировка балансовой стоимости</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m1-target-7">
+                                <label for="m1-target-7">Снижение налоговой базы</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m1-target-8">
+                                <label for="m1-target-8">Вклад в уставной капитал </label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m1-target-9">
+                                <label for="m1-target-9">Обоснование стоимости залога</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m1-target-10">
+                                <label for="m1-target-10">
+                                    Выкуп акций и/или долей
+                                </label>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-green js-open-modal" data-type="modal-business">Заказать отчет</a>
+                    </div>
+                </div>
+                <div class="objects__item" data-list="list-objects">
+                    <span class="objects__title">Транспорт</span>
+                    <div class="target">
+                        <span class="target__text">
+                            Выберите цель оценки
+                        </span>
+                        <div class="target__list">
+
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m2-target-1">
+                                <label for="m2-target-1">Привлечение финансирования</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m2-target-2">
+                                <label for="m2-target-2">Корпоративные процедуры</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m2-target-3">
+                                <label for="m2-target-3">Управленческие решения</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m2-target-4">
+                                <label for="m2-target-4">До судебные и судебные споры</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m2-target-5">
+                                <label for="m2-target-5">Совершение сделок</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m2-target-6">
+                                <label for="m2-target-6">Корректировка балансовой стоимости</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m2-target-7">
+                                <label for="m2-target-7">Снижение налоговой базы</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m2-target-8">
+                                <label for="m2-target-8">Вклад в уставной капитал </label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m2-target-9">
+                                <label for="m2-target-9">Обоснование стоимости залога</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m2-target-10">
+                                <label for="m2-target-10">
+                                    Выкуп акций и/или долей
+                                </label>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-green js-open-modal" data-type="modal-business">Заказать отчет</a>
+                    </div>
+                </div>
+                <div class="objects__item" data-list="list-objects">
+                    <span class="objects__title">Нематериальные активы</span>
+                    <div class="target">
+                        <span class="target__text">
+                            Выберите цель оценки
+                        </span>
+                        <div class="target__list">
+
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m3-target-1">
+                                <label for="m3-target-1">Привлечение финансирования</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m3-target-2">
+                                <label for="m3-target-2">Корпоративные процедуры</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m3-target-3">
+                                <label for="m3-target-3">Управленческие решения</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m3-target-4">
+                                <label for="m3-target-4">До судебные и судебные споры</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m3-target-5">
+                                <label for="m3-target-5">Совершение сделок</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m3-target-6">
+                                <label for="m3-target-6">Корректировка балансовой стоимости</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m3-target-7">
+                                <label for="m3-target-7">Снижение налоговой базы</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m3-target-8">
+                                <label for="m3-target-8">Вклад в уставной капитал </label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m3-target-9">
+                                <label for="m3-target-9">Обоснование стоимости залога</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m3-target-10">
+                                <label for="m3-target-10">
+                                    Выкуп акций и/или долей
+                                </label>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-green js-open-modal" data-type="modal-business">Заказать отчет</a>
+                    </div>
+                </div>
+                <div class="objects__item" data-list="list-objects">
+                    <span class="objects__title">Финансовые инструменты</span>
+                    <div class="target">
+                        <span class="target__text">
+                            Выберите цель оценки
+                        </span>
+                        <div class="target__list">
+
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m4-target-1">
+                                <label for="m4-target-1">Привлечение финансирования</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m4-target-2">
+                                <label for="m4-target-2">Корпоративные процедуры</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m4-target-3">
+                                <label for="m4-target-3">Управленческие решения</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m4-target-4">
+                                <label for="m4-target-4">До судебные и судебные споры</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m4-target-5">
+                                <label for="m4-target-5">Совершение сделок</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m4-target-6">
+                                <label for="m4-target-6">Корректировка балансовой стоимости</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m4-target-7">
+                                <label for="m4-target-7">Снижение налоговой базы</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m4-target-8">
+                                <label for="m4-target-8">Вклад в уставной капитал </label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m4-target-9">
+                                <label for="m4-target-9">Обоснование стоимости залога</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m4-target-10">
+                                <label for="m4-target-10">
+                                    Выкуп акций и/или долей
+                                </label>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-green js-open-modal" data-type="modal-business">Заказать отчет</a>
+                    </div>
+                </div>
+                <div class="objects__item" data-list="list-objects">
+                    <span class="objects__title">Права требования</span>
+                    <div class="target">
+                        <span class="target__text">
+                            Выберите цель оценки
+                        </span>
+                        <div class="target__list">
+
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m5-target-1">
+                                <label for="m5-target-1">Привлечение финансирования</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m5-target-2">
+                                <label for="m5-target-2">Корпоративные процедуры</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m5-target-3">
+                                <label for="m5-target-3">Управленческие решения</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m5-target-4">
+                                <label for="m5-target-4">До судебные и судебные споры</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m5-target-5">
+                                <label for="m5-target-5">Совершение сделок</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m5-target-6">
+                                <label for="m5-target-6">Корректировка балансовой стоимости</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m5-target-7">
+                                <label for="m5-target-7">Снижение налоговой базы</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m5-target-8">
+                                <label for="m5-target-8">Вклад в уставной капитал </label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m5-target-9">
+                                <label for="m5-target-9">Обоснование стоимости залога</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m5-target-10">
+                                <label for="m5-target-10">
+                                    Выкуп акций и/или долей
+                                </label>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-green js-open-modal" data-type="modal-business">Заказать отчет</a>
+                    </div>
+                </div>
+                <div class="objects__item" data-list="list-objects">
+                    <span class="objects__title">Имущественные комплексы</span>
+                    <div class="target">
+                        <span class="target__text">
+                            Выберите цель оценки
+                        </span>
+                        <div class="target__list">
+
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m6-target-1">
+                                <label for="m6-target-1">Привлечение финансирования</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m6-target-2">
+                                <label for="m6-target-2">Корпоративные процедуры</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m6-target-3">
+                                <label for="m6-target-3">Управленческие решения</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m6-target-4">
+                                <label for="m6-target-4">До судебные и судебные споры</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m6-target-5">
+                                <label for="m6-target-5">Совершение сделок</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m6-target-6">
+                                <label for="m6-target-6">Корректировка балансовой стоимости</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m6-target-7">
+                                <label for="m6-target-7">Снижение налоговой базы</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m6-target-8">
+                                <label for="m6-target-8">Вклад в уставной капитал </label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m6-target-9">
+                                <label for="m6-target-9">Обоснование стоимости залога</label>
+                            </div>
+                            <div class="input-block docs__li">
+                                <input type="checkbox" id="m6-target-10">
+                                <label for="m6-target-10">
+                                    Выкуп акций и/или долей
+                                </label>
+                            </div>
+                        </div>
+                        <a href="#" class="btn btn-green js-open-modal" data-type="modal-business">Заказать отчет</a>
+                    </div>
+                </div>
+            </div> 
+
+            <div class="target">
+                <span class="target__text">
+                    Выберите цель оценки
+                </span>
+                <div class="target__list">
+
+                    <div class="input-block docs__li">
+                        <input type="checkbox" id="target-1">
+                        <label for="target-1">Привлечение финансирования</label>
+                    </div>
+                    <div class="input-block docs__li">
+                        <input type="checkbox" id="target-2">
+                        <label for="target-2">Корпоративные процедуры</label>
+                    </div>
+                    <div class="input-block docs__li">
+                        <input type="checkbox" id="target-3">
+                        <label for="target-3">Управленческие решения</label>
+                    </div>
+                    <div class="input-block docs__li">
+                        <input type="checkbox" id="target-4">
+                        <label for="target-4">До судебные и судебные споры</label>
+                    </div>
+                    <div class="input-block docs__li">
+                        <input type="checkbox" id="target-5">
+                        <label for="target-5">Совершение сделок</label>
+                    </div>
+                    <div class="input-block docs__li">
+                        <input type="checkbox" id="target-6">
+                        <label for="target-6">Корректировка балансовой стоимости</label>
+                    </div>
+                    <div class="input-block docs__li">
+                        <input type="checkbox" id="target-7">
+                        <label for="target-7">Снижение налоговой базы</label>
+                    </div>
+                    <div class="input-block docs__li">
+                        <input type="checkbox" id="target-8">
+                        <label for="target-8">Вклад в уставной капитал </label>
+                    </div>
+                    <div class="input-block docs__li">
+                        <input type="checkbox" id="target-9">
+                        <label for="target-9">Обоснование стоимости залога</label>
+                    </div>
+                    <div class="input-block docs__li">
+                        <input type="checkbox" id="target-10">
+                        <label for="target-10">
+                            Выкуп акций и/или долей
+                        </label>
+                    </div>
+                </div>
+                <a href="#" class="btn btn-green js-open-modal" data-type="modal-business">Заказать отчет</a>
+            </div>
+        </div>
+
+
+        <div class="overlay" id="overlay"></div>
+
+        <div class="modal" id="modal-business">
+
+            <div class="modal__close">
+                <span>Закрыть</span>
+                <img src="img/close.svg" alt="" class="ico">
+            </div>
+
+            <h4 class="modal__header">
+                Отчет об оценке недвижимости
+            </h4>
+
+            <div class="modal__options">
+                <div class="modal__option">
+                    <img src="img/branch.svg" alt="" class="ico">
+                    <span>Персональный порядок</span>
+                </div>
+                <div class="modal__option">
+                    <img src="img/clock.svg" alt="" class="ico">
+                    <span>Экономия времени</span>
+                </div>
+            </div>
+
+            <div class="modal__bottom">
+                <div class="modal__form">
+                    <h4 class="modal__form-header modal__subheader">
+                        Индивидуальный расчет
+                    </h4>
+                    <form action="">
+                        <div class="input input-tel">
+                            <img src="img/phone.svg" alt="" class="ico">
+                            <input id="phone" name="phone" type="tel" maxlength="50" required value="+7(___)___-__-__" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" placeholder="+7(___)___-__-__">
+                        </div>
+                        <input type="submit" value="Получить" class="btn btn-green">
+                        <input type="checkbox" name="agreement" id="agreement-4">
+                        <label for="agreement-4">Согласие на обработку данных</label>
+                    </form>
+                </div>
+                <div class="modal__socials">
+                    <h4 class="modal__subheader">
+                        +7 (900) 000-00-00
+                    </h4>
+                    <span class="modal__desc">
+                        Рабочее время с понедельника по пятницу.
+                    </span>
+                    <h4 class="modal__subheader">
+                        с 9:00 - 18:00
+                    </h4>
+                </div>
+            </div>
+
+        </div>
+
+
+    </main>
+
+
+    <div class="overlay" id="overlay"></div>
+
+
+    <footer class=" footer ">
+        <div class="footer__block ">
+            <img src="img/logo.png " alt="Logo " class="logo " />
+            <span class="footer__header ">Оценка собственности</span>
+            <div class="footer__right-block ">
+                <span class="footer__header "><a href="tel:884523250900 ">8(8452) 32-50-900</a></span>
+                <span class="footer__address "> г. Саратов, ул. Кутякова, д.5 </span>
+            </div>
+        </div>
+        <div class="footer__block ">
+            <a href="# " class="btn btn-blue ">Услуги</a>
+            <span class="footer__copyright "> все права защищены </span>
+
+            <a href="# " class="btn btn-green ">Заказать отчет</a>
+        </div>
+    </footer>
+
+    <script src='js/modal.js'></script>
+    <script src='js/calendar.js'></script>
+    <script src='js/selectableItems.js'></script>
+
+
+</body>
+
+</html>

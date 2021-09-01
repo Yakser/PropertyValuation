@@ -2173,6 +2173,162 @@ main.report .report-block .report-types .report-type .report-type__caption span 
   margin-right: 1rem;
 }
 
+main.business {
+  padding-left: 5rem;
+}
+
+main.business .main__desc {
+  color: #2E2E2E;
+  display: block;
+  width: 70%;
+  max-width: 100%;
+  text-align: left;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+main.business .main__header-block {
+  padding-left: 0;
+}
+
+main.business .main__header-container h2 {
+  width: 100%;
+  text-align: left;
+}
+
+main.business .val-block {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 70%;
+  border-bottom: 2px dashed #D7D7D7;
+  padding-bottom: 4rem;
+}
+
+main.business .val-block .objects {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main.business .val-block .objects .objects__item {
+  width: 16rem;
+  height: 4rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: .5rem;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 12px;
+          border-radius: 12px;
+  -webkit-transition: background .3s ease-in;
+  -o-transition: background .3s ease-in;
+  transition: background .3s ease-in;
+  margin-bottom: 2rem;
+  cursor: pointer;
+}
+
+main.business .val-block .objects .objects__item .target {
+  display: none;
+}
+
+main.business .val-block .objects .objects__item span {
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-align: center;
+  -webkit-transition: color .3s ease-in;
+  -o-transition: color .3s ease-in;
+  transition: color .3s ease-in;
+}
+
+main.business .val-block .objects .objects__item:last-child {
+  margin-bottom: 0;
+}
+
+main.business .val-block .objects .objects__item:hover, main.business .val-block .objects .objects__item.selected {
+  background: #2F89CE;
+}
+
+main.business .val-block .objects .objects__item:hover span, main.business .val-block .objects .objects__item.selected span {
+  color: white;
+}
+
+main.business .val-block .target {
+  background: #FFFFFF;
+  -webkit-box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.1);
+          box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 12px;
+          border-radius: 12px;
+  padding: 2rem 3rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main.business .val-block .target .target__text {
+  display: block;
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+main.business .val-block .target .target__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+main.business .val-block .target .target__list .input-block {
+  margin: 0;
+}
+
+main.business .val-block .target .target__list .input-block label {
+  margin: 0;
+}
+
 main.objects {
   margin-bottom: 5rem;
 }
@@ -2791,12 +2947,32 @@ footer .footer__block .footer__address {
   main.payment-u.payment .order-block {
     width: 80%;
   }
+  main.business .main__desc {
+    width: 80%;
+  }
+  main.business .main__header-block {
+    padding-left: 0;
+    width: 80%;
+  }
+  main.business .val-block {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 1500px) {
   nav {
     width: 90%;
     padding: 0 3rem;
+  }
+  main.business .main__desc {
+    width: 90%;
+  }
+  main.business .main__header-block {
+    padding-left: 0;
+    width: 90%;
+  }
+  main.business .val-block {
+    width: 90%;
   }
   main.payment-u.payment .main__header-block {
     margin-bottom: 0;
@@ -3119,6 +3295,110 @@ footer .footer__block .footer__address {
 @media screen and (max-width: 1024px) {
   .bg-gradient {
     height: 220vh;
+  }
+  main.business {
+    padding-left: 0;
+  }
+  main.business .main__desc {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  main.business .val-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  main.business .val-block .objects {
+    width: -webkit-calc(100% - 2rem);
+    width: calc(100% - 2rem);
+    margin-bottom: 2rem;
+  }
+  main.business .val-block .objects .objects__item {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main.business .val-block .objects .objects__item.selected {
+    padding: 0;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    position: relative;
+    background: -webkit-gradient(linear, left top, left bottom, from(#2F89CE), to(#2F89CE)) padding-box, -webkit-gradient(linear, left top, left bottom, from(#2f89ce), to(#21a038)) border-box;
+    background: -webkit-linear-gradient(#2F89CE, #2F89CE) padding-box, -webkit-linear-gradient(top, #2f89ce 0%, #21a038 100%) border-box;
+    background: -o-linear-gradient(#2F89CE, #2F89CE) padding-box, -o-linear-gradient(top, #2f89ce 0%, #21a038 100%) border-box;
+    background: linear-gradient(#2F89CE, #2F89CE) padding-box, linear-gradient(180deg, #2f89ce 0%, #21a038 100%) border-box;
+    border: 3px solid transparent;
+    -webkit-border-radius: 12px;
+            border-radius: 12px;
+  }
+  main.business .val-block .objects .objects__item.selected .objects__title {
+    margin: 1rem 0;
+  }
+  main.business .val-block .objects .objects__item.selected .objects__title {
+    width: 100%;
+    margin-top: 1rem;
+    font-weight: 500;
+    background-color: #2F89CE;
+    -webkit-border-radius: 12px;
+            border-radius: 12px;
+    position: absolute;
+    padding: 1rem 0;
+    left: 0;
+    top: 0;
+    margin: 0;
+    z-index: 3;
+  }
+  main.business .val-block .objects .objects__item.selected .target {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    z-index: 2;
+    padding: 0 1rem;
+    margin-top: 3rem;
+    -webkit-border-top-left-radius: 0;
+            border-top-left-radius: 0;
+    -webkit-border-top-right-radius: 0;
+            border-top-right-radius: 0;
+  }
+  main.business .val-block .objects .objects__item.selected .target .target__text {
+    color: #2E2E2E;
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+    margin-top: 1rem;
+  }
+  main.business .val-block .objects .objects__item.selected .target .target__list {
+    margin: 2rem 0;
+  }
+  main.business .val-block .objects .objects__item.selected .target .target__list .input-block {
+    margin-bottom: 1rem;
+  }
+  main.business .val-block .objects .objects__item.selected .target .btn {
+    margin-left: -1rem;
+    width: -webkit-calc(100% + 2rem);
+    width: calc(100% + 2rem);
+  }
+  main.business .val-block .target {
+    width: -webkit-calc(100% - 2rem);
+    width: calc(100% - 2rem);
+    display: none;
   }
   main.main .main__desc,
   main.main .main__banks {
