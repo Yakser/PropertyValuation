@@ -8,7 +8,7 @@ var _iteratorError = undefined;
 try {
   for (var _iterator = lists[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
     var list = _step.value;
-    items = list.children;
+    var items = list.children;
     var _iteratorNormalCompletion2 = true;
     var _didIteratorError2 = false;
     var _iteratorError2 = undefined;
