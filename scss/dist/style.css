@@ -638,6 +638,13 @@ input[type=checkbox]:checked + label::before {
 .modal .modal__desc.modal__desc_sm {
   font-size: 1rem;
 }
+.modal .modal__header .property-type span:last-child {
+  color: #D7D7D7;
+}
+.modal .modal__header .property-type span:last-child mark {
+  background-color: transparent;
+  color: #477ABC;
+}
 .modal#modal-save-docs {
   width: 40rem;
   height: 48rem;
@@ -919,14 +926,209 @@ input[type=checkbox]:checked + label::before {
   width: max-content;
   margin: 0 auto;
 }
+.modal#modal-calculate {
+  width: 70rem;
+  height: 40rem;
+  left: calc(50% - 35rem);
+  top: calc(50% - 20rem);
+}
+.modal#modal-calculate .modal__close {
+  right: calc(50% - 35rem + 3rem);
+  top: calc(50% - 20rem + 1.5rem);
+}
+.modal#modal-calculate .calc__header {
+  display: flex;
+  align-items: flex-end;
+  margin: 2rem 0;
+  margin-top: 4rem;
+}
+.modal#modal-calculate .calc__header .left h4 {
+  font-size: 2.5rem;
+}
+.modal#modal-calculate .calc__header .left p {
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.modal#modal-calculate .calc__header .right p {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #21A038;
+  margin-left: 0.5rem;
+}
+.modal#modal-calculate .calc__header .right p mark {
+  font-size: 5rem;
+  background-color: transparent;
+  font-weight: 600;
+  color: #21A038;
+  line-height: 0;
+}
+.modal#modal-calculate .line {
+  width: 100%;
+  border-bottom: 2px dashed #D7D7D7;
+}
+.modal#modal-calculate .calc-block {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  border: 3px solid transparent;
+  border-radius: 12px;
+  padding: 1rem;
+  background: linear-gradient(#fff, #fff) padding-box, linear-gradient(90deg, #21A038 0%, rgba(255, 255, 255, 0) 100%) border-box;
+}
+.modal#modal-calculate .calc-block .left,
+.modal#modal-calculate .calc-block .mid,
+.modal#modal-calculate .calc-block .right {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+.modal#modal-calculate .calc-block .left {
+  justify-content: space-between;
+}
+.modal#modal-calculate .calc-block .left span {
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+.modal#modal-calculate .calc-block .left span:first-child {
+  font-weight: 400;
+}
+.modal#modal-calculate .calc-block .left span.price {
+  font-size: 3rem;
+}
+.modal#modal-calculate .calc-block .mid span {
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+.modal#modal-calculate .calc-block .mid .input-tel input {
+  padding: 0.5rem 1rem;
+}
+.modal#modal-calculate .calc-block .mid .input-block:last-child {
+  margin-bottom: 0;
+}
+.modal#modal-calculate .calc-block .mid .input-block:last-child label {
+  margin-bottom: 0;
+}
+.modal#modal-calculate .calc-block .right {
+  align-self: center;
+}
+.modal#modal-calculate .calc-block .right .btn {
+  padding: 5rem 0;
+}
+.modal#modal-prob {
+  width: 70rem;
+  height: 40rem;
+  left: calc(50% - 35rem);
+  top: calc(50% - 20rem);
+}
+.modal#modal-prob .modal__close {
+  right: calc(50% - 35rem + 3rem);
+  top: calc(50% - 20rem + 1.5rem);
+}
+.modal#modal-prob .prob__header {
+  display: flex;
+  align-items: center;
+  margin: 2rem 0;
+}
+.modal#modal-prob .prob__header .right {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2rem;
+  align-self: flex-end;
+}
+.modal#modal-prob .prob__header .right h4 {
+  font-size: 2.5rem;
+}
+.modal#modal-prob .prob__header .right p {
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin-left: 0.5rem;
+}
+.modal#modal-prob .prob__header .right p mark {
+  font-size: 5rem;
+  background-color: transparent;
+  font-weight: 600;
+  color: #21A038;
+  line-height: 0;
+}
+.modal#modal-prob .prob-block {
+  display: flex;
+  border-top: 2px dashed #D7D7D7;
+}
+.modal#modal-prob .prob-block .left {
+  padding-top: 2rem;
+  border-right: 2px dashed #D7D7D7;
+  padding-right: 2rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 2rem;
+}
+.modal#modal-prob .prob-block .left form {
+  width: 100%;
+  display: grid;
+  grid-template-areas: "email btn" "tel btn" "check check";
+}
+.modal#modal-prob .prob-block .left form .btn {
+  grid-area: btn;
+}
+.modal#modal-prob .prob-block .left form .email {
+  grid-area: email;
+}
+.modal#modal-prob .prob-block .left form .tel {
+  grid-area: tel;
+}
+.modal#modal-prob .prob-block .left form .check {
+  grid-area: check;
+  margin-bottom: 0;
+}
+.modal#modal-prob .prob-block .left .btn {
+  margin-left: 2rem;
+  min-width: 10rem;
+  white-space: normal;
+  height: auto;
+  text-align: center;
+}
+.modal#modal-prob .prob-block .left span {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.modal#modal-prob .prob-block .left .input-tel {
+  width: 100%;
+}
+.modal#modal-prob .prob-block .left .input-tel input {
+  width: 100%;
+  padding: 0.5rem 1rem;
+}
+.modal#modal-prob .prob-block .right {
+  padding-top: 2rem;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.modal#modal-prob .prob-block .right span {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.modal#modal-prob .prob-block .right span.bold {
+  font-size: 2rem;
+  font-weight: 600;
+}
 .modal .modal__header {
   font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 .modal .modal__close {
   position: fixed;
-  right: calc(50% - 25rem + 3rem);
-  top: calc(50% - 15.75rem + 1.5rem);
+  right: calc(50% - 30rem + 1.5rem);
+  top: calc(50% - 15rem + 1.5rem);
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -1395,9 +1597,10 @@ main.reduction .r-blocks .block .block__value {
   background: linear-gradient(#fff, #fff) padding-box, linear-gradient(90deg, #E85151 0%, rgba(255, 255, 255, 0) 100%) border-box;
 }
 main.reduction .r-blocks .block .block__value span {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 main.reduction .r-blocks .block .block__value .block__value-price {
+  font-size: 2rem;
   flex-shrink: 0;
 }
 main.reduction .r-blocks .block .block__value .block__value-price mark {
@@ -1421,6 +1624,9 @@ main.reduction .prices .block {
   border-radius: 36px;
   padding: 2rem;
   margin-bottom: 4rem;
+}
+main.reduction .prices .block .btn {
+  margin: 0 auto;
 }
 main.reduction .prices .block .block__header {
   color: #2F89CE;
@@ -2404,6 +2610,64 @@ main.payment .main__header-block {
   }
   main.order .order-block .ticket-block .ticket .ticket__table .row {
     align-items: center;
+  }
+
+  .modal#modal-calculate {
+    width: calc(100% - 2rem);
+    max-height: calc(100% - 2rem);
+    height: max-content;
+    left: 1rem;
+    top: 1rem;
+  }
+  .modal#modal-calculate .modal__close {
+    right: 3rem;
+    top: 3rem;
+  }
+  .modal#modal-calculate .calc__header {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+  }
+  .modal#modal-calculate .calc__header .right p mark {
+    line-height: normal;
+  }
+  .modal#modal-calculate .calc-block {
+    flex-direction: column;
+    background: linear-gradient(#fff, #fff) padding-box, linear-gradient(180deg, #21A038 0%, rgba(255, 255, 255, 0) 100%) border-box;
+    padding-bottom: 0;
+  }
+  .modal#modal-calculate .calc-block .left span {
+    font-size: 2rem;
+  }
+  .modal#modal-calculate .calc-block .left span.price {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  .modal#modal-calculate .calc-block .mid span {
+    margin: 0;
+    margin-bottom: 0.5rem;
+  }
+  .modal#modal-calculate .calc-block .mid form {
+    width: 100%;
+  }
+  .modal#modal-calculate .calc-block .mid form .input,
+.modal#modal-calculate .calc-block .mid form .input-block {
+    width: 100%;
+  }
+  .modal#modal-calculate .calc-block .mid form .input input,
+.modal#modal-calculate .calc-block .mid form .input-block input {
+    width: 100%;
+  }
+  .modal#modal-calculate .calc-block .right {
+    width: 100%;
+  }
+  .modal#modal-calculate .calc-block .right .btn {
+    min-width: 10rem;
+    padding: 0;
+    width: 100%;
+    margin: 0;
   }
 }
 @media screen and (max-width: 1024px) {
@@ -3442,6 +3706,23 @@ main.payment .main__header-block h2 {
     margin-right: 0;
     margin-bottom: 2rem;
   }
+
+  main.reduction .r-blocks {
+    width: calc(100% - 2rem);
+  }
+  main.reduction .r-blocks .block .block__header {
+    flex-direction: column;
+  }
+  main.reduction .r-blocks .block .block__header h4 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    text-align: center;
+    margin: 0;
+  }
+  main.reduction .r-blocks .block .block__header span {
+    font-size: 2.5rem;
+    text-align: center;
+  }
 }
 @media screen and (max-width: 485px) {
   nav {
@@ -3450,6 +3731,29 @@ main.payment .main__header-block h2 {
 
   main.main .main__header {
     font-size: 1.5rem;
+  }
+
+  .modal#modal-calculate {
+    width: calc(100% - 2rem);
+    max-height: calc(100% - 2rem);
+    height: max-content;
+    left: 1rem;
+    top: 1rem;
+  }
+  .modal#modal-calculate .modal__close {
+    right: 3rem;
+    top: 3rem;
+  }
+  .modal#modal-calculate .calc__header {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 0;
+  }
+  .modal#modal-calculate .calc__header .right p mark {
+    line-height: normal;
+    font-size: 3rem;
   }
 }
 @media screen and (max-width: 445px) {

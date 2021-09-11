@@ -202,9 +202,9 @@
             <p>введите кадастровый номер</p>
             <form action="">
                 <div class="input">
-                    <input type="text" placeholder="____________:____________:________________________:____________" id="cadastral-number" pattern="[0-9]{2}:[0-9]{2}:[0-9]{7}:[0-9]{2}" required>
+                    <input type="text" placeholder="__:__:____:__" id="cadastral-number" pattern="[0-9]{2}:[0-9]{2}:[0-9]{6}:[0-9]{2}" required>
                 </div>
-                <input type="submit" value="Посчитать" class="btn btn-green">
+                <input type="submit" value="Посчитать" class="btn btn-green js-open-modal" data-type="modal-prob">
             </form>
             <p>система посчитает автоматически или вам предоставят персональный расчет</p>
         </div>
@@ -231,7 +231,7 @@
                     </p>
                     <span>4 дней</span>
                 </div>
-                <a href="#" class="btn btn-green">заказать</a>
+                <button href="#" class="btn btn-green js-open-modal" data-type="modal-commerc">заказать</button>
             </div>
             <div class="block">
                 <div class="block__header">
@@ -245,7 +245,8 @@
                     </p>
                     <span>4 дней</span>
                 </div>
-                <a href="#" class="btn btn-green">заказать</a>
+                <button href="#" class="btn btn-green js-open-modal" data-type="modal-commerc">заказать</button>
+
             </div>
             <div class="block">
                 <div class="block__header">
@@ -259,7 +260,8 @@
                     </p>
                     <span>4 дней</span>
                 </div>
-                <a href="#" class="btn btn-green">заказать</a>
+                <button href="#" class="btn btn-green js-open-modal" data-type="modal-commerc">заказать</button>
+
             </div>
             <div class="block">
                 <div class="block__header">
@@ -273,7 +275,8 @@
                     </p>
                     <span>4 дней</span>
                 </div>
-                <a href="#" class="btn btn-green">заказать</a>
+                <button href="#" class="btn btn-green js-open-modal" data-type="modal-commerc">заказать</button>
+
             </div>
 
         </div>
@@ -326,7 +329,6 @@
         </div>
 
         <div class="docs">
-
             <ul class="docs__li">
                 <li>
                     1. Заключение договора
@@ -432,13 +434,178 @@
             </div>
         </div>
 
-
-
-
     </main>
 
 
     <div class="overlay" id="overlay"></div>
+
+    <div class="modal" id="modal-calculate">
+
+        <div class="modal__close">
+            <span>Закрыть</span>
+            <img src="img/close.svg" alt="" class="ico">
+        </div>
+
+        <div class="calc__header">
+            <div class="left">
+                <h4>Снижение</h4>
+                <p>кадастровой стоимости</p>
+
+            </div>
+            <div class="right">
+                <p>на <mark>60-70%</mark></p>
+            </div>
+        </div>
+
+        <div class="line"></div>
+
+        <div class="calc-block">
+            <div class="left">
+                <span>стоимость отчета</span>
+                <span class="price">от 5 000 ₽</span>
+                <span>Срок исполнения от </span>
+                <span>2 дней</span>
+            </div>
+            <div class="mid">
+                <span>заполните данные</span>
+                <form action="">
+                    <div class="input-block">
+                        <div class="input">
+                            <img src="img/email.svg" alt="" class="ico">
+                            <input id="email-result" name="email-result" type="email" placeholder="Ваш Email" required>
+                        </div>
+                    </div>
+                    <div class="input input-tel">
+                        <img src="img/phone.svg" alt="" class="ico">
+                        <input id="phone" name="phone" type="tel" maxlength="50" required value="+7(___)___-__-__" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" placeholder="+7(___)___-__-__">
+                    </div>
+                    <div class="input-block">
+                        <input type="checkbox" id="agreement-calc">
+                        <label for="agreement-calc">Согласие на обработку данных</label>
+                    </div>
+                </form>
+            </div>
+            <div class="right">
+                <a href="#" class="btn btn-green">Заказать отчет</a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal" id="modal-prob">
+
+        <div class="modal__close">
+            <span>Закрыть</span>
+            <img src="img/close.svg" alt="" class="ico">
+        </div>
+
+        <div class="prob__header">
+            <div class="left">
+                <img src="img/speed.png" alt="">
+            </div>
+            <div class="right">
+                <h4>Высокая вероятность</h4>
+                <p>
+                    снижения кадастровой стоимости
+                </p>
+            </div>
+        </div>
+
+        <div class="prob-block">
+            <div class="left">
+                <span>
+                    для получения расчета необходимы дополнительные данные
+                </span>
+                <form action="">
+                    <div class="input-block email">
+                        <div class="input">
+                            <img src="img/email.svg" alt="" class="ico">
+                            <input id="email-result" name="email-result" type="email" placeholder="Ваш Email" required>
+                        </div>
+                    </div>
+                    <div class="input input-tel tel">
+                        <img src="img/phone.svg" alt="" class="ico">
+                        <input id="phone" name="phone" type="tel" maxlength="50" required value="+7(___)___-__-__" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" placeholder="+7(___)___-__-__">
+                    </div>
+                    <div class="input-block check">
+                        <input type="checkbox" id="agreement-prob">
+                        <label for="agreement-prob">Согласие на обработку данных</label>
+                    </div>
+                    <button href="#" class="btn btn-green js-open-modal" data-type="modal-calculate">Получить предварительный расчет</button>
+                </form>
+            </div>
+            <div class="right">
+                <span class="bold">
+                    +7 (900) 000-00-00
+                </span>
+                <span>
+                    Рабочее время с понедельника по пятницу.
+                </span>
+                <span class="bold">с 9:00 - 18:00</span>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal" id="modal-commerc">
+
+        <div class="modal__close">
+            <span>Закрыть</span>
+            <img src="img/close.svg" alt="" class="ico">
+        </div>
+
+        <h4 class="modal__header">
+            <div class="property-type">
+                <span>
+
+                    Отчет об оценке 
+                </span>
+                <span>
+                    <br> <mark>ИЖС</mark>/Квартира/Земля/ Нежилое
+                </span>
+            </div>
+        </h4>
+
+        <div class="modal__options">
+            <div class="modal__option">
+                <img src="img/branch.svg" alt="" class="ico">
+                <span>Персональный порядок</span>
+            </div>
+            <div class="modal__option">
+                <img src="img/clock.svg" alt="" class="ico">
+                <span>Экономия времени</span>
+            </div>
+        </div>
+
+        <div class="modal__bottom">
+            <div class="modal__form">
+                <h4 class="modal__form-header modal__subheader">
+                    Индивидуальный расчет
+                </h4>
+                <form action="">
+                    <div class="input input-tel">
+                        <img src="img/phone.svg" alt="" class="ico">
+                        <input id="phone" name="phone" type="tel" maxlength="50" required value="+7(___)___-__-__" pattern="\+7\s?[\(]{0,1}9[0-9]{2}[\)]{0,1}\s?\d{3}[-]{0,1}\d{2}[-]{0,1}\d{2}" placeholder="+7(___)___-__-__">
+                    </div>
+                    <input type="submit" value="Получить" class="btn btn-green">
+                    <input type="checkbox" name="agreement" id="agreement-4">
+                    <label for="agreement-4">Согласие на обработку данных</label>
+                </form>
+            </div>
+            <div class="modal__socials">
+                <h4 class="modal__subheader">
+                    +7 (900) 000-00-00
+                </h4>
+                <span class="modal__desc">
+                    Рабочее время с понедельника по пятницу.
+                </span>
+                <h4 class="modal__subheader">
+                    с 9:00 - 18:00
+                </h4>
+            </div>
+        </div>
+
+    </div>
 
 
     <footer class=" footer ">

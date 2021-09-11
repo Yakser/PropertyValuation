@@ -673,6 +673,18 @@ input[type="checkbox"] {
             font-size: 1rem;
         }
     }
+    .modal__header {
+        .property-type {
+            span:last-child {
+                color: $gray;
+
+                mark {
+                    background-color: transparent;
+                    color: $blue;
+                }
+            }
+        }
+    }
     &#modal-save-docs {
         width: 40rem;
         height: 48rem;
@@ -970,14 +982,218 @@ input[type="checkbox"] {
             margin: 0 auto;
         }
     }
+    &#modal-calculate {
+        width: 70rem;
+        height: 40rem;
+        left: calc(50% - 35rem);
+        top: calc(50% - 20rem);
+        .modal__close {
+            right: calc(50% - 35rem + 3rem);
+            top: calc(50% - 20rem + 1.5rem);
+        }
+        .calc__header {
+            display: flex;
+            align-items: flex-end;
+            margin: 2rem 0;
+            margin-top: 4rem;
+            .left {
+                h4 {
+                    font-size: 2.5rem;
+                }
+                p {
+                    font-weight: 600;
+                    font-size: 1.5rem;
+                }
+            }
+            .right {
+                p {
+                    font-weight: 600;
+                    font-size: 1.5rem;
+                    color: $green2;
+                    margin-left: 0.5rem;
+                    mark {
+                        font-size: 5rem;
+                        background-color: transparent;
+                        font-weight: 600;
+                        color: $green2;
+                        line-height: 0;
+                    }
+                }
+            }
+        }
+        .line {
+            width: 100%;
+            border-bottom: 2px dashed $gray;
+        }
+        .calc-block {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 2rem;
+            border: 3px solid transparent;
+            border-radius: 12px;
+            padding: 1rem;
+            background: linear-gradient(#fff, #fff) padding-box, linear-gradient(90deg, $green2 0%, rgba(255, 255, 255, 0) 100%) border-box;
+            .left,
+            .mid,
+            .right {
+                display: flex;
+                flex-direction: column;
+                padding: 1rem 0;
+            }
+            .left {
+                justify-content: space-between;
+                span {
+                    width: 100%;
+                    text-align: center;
+                    font-weight: 600;
+                    font-size: 1.5rem;
+                    &:first-child {
+                        font-weight: 400;
+                    }
+                    &.price {
+                        font-size: 3rem;
+                    }
+                }
+            }
+            .mid {
+                span {
+                    width: 100%;
+                    text-align: center;
+                    font-size: 1.5rem;
+                    margin-bottom: 2rem;
+                }
+                .input-tel {
+                    input {
+                        padding: .5rem 1rem;
+                    }
+                }
+                .input-block:last-child {
+                    margin-bottom: 0;
+                    label {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            .right {
+                align-self: center;
+                .btn {
+                    padding: 5rem 0;
+                }
+            }
+        }
+    }
+    &#modal-prob {
+        width: 70rem;
+        height: 40rem;
+        left: calc(50% - 35rem);
+        top: calc(50% - 20rem);
+        .modal__close {
+            right: calc(50% - 35rem + 3rem);
+            top: calc(50% - 20rem + 1.5rem);
+        }
+        .prob__header {
+            display: flex;
+            align-items: center;
+            margin: 2rem 0;
+            .right {
+                display: flex;
+                flex-direction: column;
+                margin-left: 2rem;
+                align-self: flex-end;
+                h4 {
+                    font-size: 2.5rem;
+                }
+                p {
+                    font-weight: 600;
+                    font-size: 1.5rem;
+                    margin-left: 0.5rem;
+                    mark {
+                        font-size: 5rem;
+                        background-color: transparent;
+                        font-weight: 600;
+                        color: $green2;
+                        line-height: 0;
+                    }
+                }
+            }
+        }
+        .prob-block {
+            display: flex;
+            border-top: 2px dashed $gray;
+            .left {
+                padding-top: 2rem;
+                border-right: 2px dashed #D7D7D7;
+                padding-right: 2rem;
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding-bottom: 2rem;
+                form {
+                    width: 100%;
+                    display: grid;
+                    grid-template-areas: "email btn" "tel btn" "check check";
+                    .btn {
+                        grid-area: btn;
+                    }
+                    .email {
+                        grid-area: email;
+                    }
+                    .tel {
+                        grid-area: tel;
+                    }
+                    .check {
+                        grid-area: check;
+                        margin-bottom: 0;
+                    }
+                }
+                .btn {
+                    // width: calc(50% - 2rem);
+                    margin-left: 2rem;
+                    min-width: 10rem;
+                    white-space: normal;
+                    height: auto;
+                    text-align: center;
+                }
+                span {
+                    display: block;
+                    font-size: 1.2rem;
+                    margin-bottom: 1rem;
+                }
+                .input-tel {
+                    width: 100%;
+                    input {
+                        width: 100%;
+                        padding: .5rem 1rem;
+                    }
+                }
+            }
+            .right {
+                padding-top: 2rem;
+                padding-left: 2rem;
+                padding-bottom: 2rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                span {
+                    font-size: 1.5rem;
+                    text-align: center;
+                    &.bold {
+                        font-size: 2rem;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
     .modal__header {
         font-size: 2.5rem;
         margin-bottom: 1rem;
     }
     .modal__close {
         position: fixed;
-        right: calc(50% - 25rem + 3rem);
-        top: calc(50% - 15.75rem + 1.5rem);
+        right: calc(50% - 30rem + 1.5rem);
+        top: calc(50% - 15rem + 1.5rem);
         display: flex;
         align-items: center;
         cursor: pointer;
@@ -1452,10 +1668,11 @@ main.reduction {
                 border-radius: 12px;
                 background: linear-gradient(#fff, #fff) padding-box, linear-gradient(90deg, $red 0%, rgba(255, 255, 255, 0) 100%) border-box;
                 span {
-                    font-size: 2rem;
+                    font-size: 1.5rem;
                 }
                 .block__value-text {}
                 .block__value-price {
+                    font-size: 2rem;
                     flex-shrink: 0;
                     mark {
                         font-weight: 600;
@@ -1481,6 +1698,9 @@ main.reduction {
             border-radius: 36px;
             padding: 2rem;
             margin-bottom: 4rem;
+            .btn {
+                margin: 0 auto;
+            }
             .block__header {
                 color: #2F89CE;
                 font-size: 3rem;
@@ -2551,6 +2771,66 @@ footer {
                             align-items: center;
                         }
                     }
+                }
+            }
+        }
+    }
+    .modal#modal-calculate {
+        width: calc(100% - 2rem);
+        max-height: calc(100% - 2rem);
+        height: max-content;
+        left: 1rem;
+        top: 1rem;
+        .modal__close {
+            right: 3rem;
+            top: 3rem;
+        }
+        .calc__header {
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            align-items: flex-start;
+            margin: 0;
+            .right p mark {
+                line-height: normal;
+            }
+        }
+        .calc-block {
+            flex-direction: column;
+            background: linear-gradient(#fff, #fff) padding-box, linear-gradient(180deg, $green2 0%, rgba(255, 255, 255, 0) 100%) border-box;
+            padding-bottom: 0;
+            .left {
+                span {
+                    font-size: 2rem;
+                    &.price {
+                        font-size: 3rem;
+                        margin-bottom: 1rem;
+                    }
+                }
+            }
+            .mid {
+                span {
+                    margin: 0;
+                    margin-bottom: 0.5rem;
+                }
+                form {
+                    width: 100%;
+                    .input,
+                    .input-block {
+                        width: 100%;
+                        input {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+            .right {
+                width: 100%;
+                .btn {
+                    min-width: 10rem;
+                    padding: 0;
+                    width: 100%;
+                    margin: 0;
                 }
             }
         }
@@ -3667,6 +3947,26 @@ footer {
             }
         }
     }
+    main.reduction {
+        .r-blocks {
+            width: calc(100% - 2rem);
+            .block {
+                .block__header {
+                    flex-direction: column;
+                    h4 {
+                        margin-bottom: 1rem;
+                        font-size: 2rem;
+                        text-align: center;
+                        margin: 0;
+                    }
+                    span {
+                        font-size: 2.5rem;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 485px) {
@@ -3676,6 +3976,28 @@ footer {
     main.main {
         .main__header {
             font-size: 1.5rem;
+        }
+    }
+    .modal#modal-calculate {
+        width: calc(100% - 2rem);
+        max-height: calc(100% - 2rem);
+        height: max-content;
+        left: 1rem;
+        top: 1rem;
+        .modal__close {
+            right: 3rem;
+            top: 3rem;
+        }
+        .calc__header {
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            align-items: flex-start;
+            margin: 0;
+            .right p mark {
+                line-height: normal;
+                font-size: 3rem;
+            }
         }
     }
 }
