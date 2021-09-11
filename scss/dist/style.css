@@ -1738,8 +1738,14 @@ main.reduction .licenses .licenses__list .license {
 main.reduction .news {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
   width: 70%;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
+}
+main.reduction .news .block {
+  width: calc(50% - 1px - 2rem);
+  margin-bottom: 2rem;
 }
 main.reduction .news .block .block__header {
   font-weight: 600;
@@ -2776,6 +2782,7 @@ main.reduction .news {
   }
   main.reduction .news {
     flex-direction: column;
+    width: 90%;
   }
   main.reduction .news .line {
     display: none;
@@ -2787,6 +2794,7 @@ main.reduction .news {
     margin: 1rem 0;
     border-bottom: 2px dashed #D7D7D7;
     padding-bottom: 2rem;
+    width: 100%;
   }
   main.reduction .news .block .btn {
     margin: 0;

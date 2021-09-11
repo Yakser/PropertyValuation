@@ -1813,9 +1813,13 @@ main.reduction {
     .news {
         display: flex;
         align-items: center;
+        justify-content:space-between;
+        flex-wrap: wrap;
         width: 70%;
-        margin-bottom: 1rem;
+        margin: 1rem 0;
         .block {
+            width: calc(50% - 1px - 2rem);
+            margin-bottom: 2rem;
             .block__header {
                 font-weight: 600;
                 font-size: 1.5rem;
@@ -2942,6 +2946,7 @@ footer {
         }
         .news {
             flex-direction: column;
+            width: 90%;
             .line {
                 display: none;
             }
@@ -2952,6 +2957,7 @@ footer {
                 margin: 1rem 0;
                 border-bottom: 2px dashed $gray;
                 padding-bottom: 2rem;
+                width: 100%;
                 .btn {
                     margin: 0;
                     margin-top: 1rem;
