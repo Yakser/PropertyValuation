@@ -4003,6 +4003,9 @@ footer .footer__block .footer__address {
     width: -webkit-calc(50% - 2rem);
     width: calc(50% - 2rem);
   }
+  main.reduction .news {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 1440px) {
