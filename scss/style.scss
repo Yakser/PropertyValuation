@@ -677,7 +677,6 @@ input[type="checkbox"] {
         .property-type {
             span:last-child {
                 color: $gray;
-
                 mark {
                     background-color: transparent;
                     color: $blue;
@@ -1548,9 +1547,16 @@ main.reduction {
     padding-left: 5rem;
     .main__header-block {
         padding-left: 0;
-        margin-bottom: 1rem;
+        margin: 2rem 0;
         h2 {
             text-align: left;
+            mark {
+                background-color: transparent;
+                color: $green2;
+                &.blue {
+                    color: $blue;
+                }
+            }
         }
         .main__header-container {
             flex-direction: column;
@@ -1803,6 +1809,7 @@ main.reduction {
             }
         }
     }
+
     .news {
         display: flex;
         align-items: center;
@@ -1828,6 +1835,40 @@ main.reduction {
             width: 1px;
             border-right: 2px dashed $gray;
             margin: 0 1rem;
+        }
+    }
+    .choose-type {
+        display: flex;
+        width: 70%;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .main__desc {
+            width: 100%;
+            flex-shrink: 0;
+        }
+        margin: 2rem 0;
+        margin-bottom: 3rem;
+        a {
+            width: 30rem;
+            height: 10rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #FFFFFF;
+            box-shadow: 0px 4px 26px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            padding: 1rem;
+            cursor: pointer;
+            transition: .3s ease-in;
+            font-weight: 600;
+            font-size: 2rem;
+            line-height: 138.4%;
+            &.selected,
+            &:hover {
+                background-color: $blue;
+                color: #FBFBFB;
+            }
         }
     }
 }
@@ -2543,6 +2584,12 @@ footer {
                 }
             }
         }
+        .choose-type {
+            width: 80%;
+            a {
+                width: calc(50% - 2rem);
+            }
+        }
     }
 }
 
@@ -2845,9 +2892,10 @@ footer {
         .main__header-block,
         .main__desc,
         .main__subheader {
+            width: calc(100% - 2rem);
             .main__header-container h2 {
-                width: calc(100% - 2rem);
                 text-align: center;
+                width: 100%;
             }
             width: calc(100% - 2rem);
             text-align: center;
@@ -3668,6 +3716,14 @@ footer {
                         }
                     }
                 }
+            }
+        }
+        .choose-type {
+            width: calc(100% - 2rem);
+            flex-direction: column;
+            a {
+                width: 100%;
+                margin-bottom: 2rem;
             }
         }
     }
