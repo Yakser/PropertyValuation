@@ -33,12 +33,12 @@ body.modal-active {
   position: absolute;
   top: 0;
   min-height: 100%;
-  width: auto;
   z-index: -1;
 }
 
 .bg-right {
   right: -300px;
+  top: 0;
   z-index: -1;
 }
 
@@ -235,6 +235,40 @@ body.modal-active {
   flex-grow: 1;
   width: 100%;
   margin-top: 1rem;
+}
+
+.thanks {
+  width: 70%;
+  position: relative;
+  margin: 2rem 0;
+}
+.thanks h2.main__header {
+  width: 70%;
+  text-align: left;
+  font-size: 3rem;
+}
+.thanks .thanks__bottom {
+  align-items: center;
+  display: flex;
+  background: #4474B5;
+  box-shadow: 0px 8px 20px #5C8ED0;
+  border-radius: 50px;
+  margin: 2rem 0;
+}
+.thanks .thanks__bottom p {
+  margin: 2rem;
+  color: #fff;
+  font-weight: 500;
+  line-height: 44px;
+  text-align: left;
+  font-size: 2.5rem;
+  width: 50%;
+}
+.thanks img {
+  height: 100%;
+  position: absolute;
+  top: -2rem;
+  right: 2rem;
 }
 
 #calendar {
@@ -1405,8 +1439,12 @@ main .main__banks .main__bank-block img {
 }
 
 main.main .main__header {
-  margin: 2rem 0;
-  margin-bottom: 4rem;
+  margin: 4rem 0;
+}
+main.main .main__desc {
+  display: block;
+  margin: 4rem 0;
+  margin-bottom: 2rem;
 }
 
 main.banks {
@@ -2360,6 +2398,13 @@ footer .footer__block .footer__address {
     padding: 0 3rem;
   }
 
+  .thanks {
+    width: 90%;
+  }
+  .thanks .thanks__bottom p {
+    width: 70%;
+  }
+
   main.business .main__desc {
     width: 90%;
   }
@@ -2728,6 +2773,34 @@ main.payment .main__header-block {
 @media screen and (max-width: 1024px) {
   .bg-gradient {
     height: 220vh;
+  }
+
+  .thanks {
+    width: calc(100% - 2rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .thanks img {
+    position: relative;
+    top: 0;
+    left: 0;
+    max-height: 400px;
+  }
+  .thanks h2.main__header {
+    text-align: center;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+  .thanks .thanks__bottom {
+    border-radius: 36px;
+    margin-top: 0;
+  }
+  .thanks .thanks__bottom p {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
   }
 
   main.reduction .main__header-block,
@@ -3793,6 +3866,17 @@ main.payment .main__header-block h2 {
 @media screen and (max-width: 485px) {
   nav {
     padding: 0 1rem;
+  }
+
+  main .thanks h2.main__header {
+    text-align: center;
+    font-size: 2rem;
+    margin: 0;
+    margin-bottom: 2rem;
+  }
+  main .thanks .thanks__bottom p {
+    font-size: 1.5rem;
+    margin: 1rem;
   }
 
   main.main .main__header {
