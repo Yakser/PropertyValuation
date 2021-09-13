@@ -290,8 +290,8 @@ body {
     border: 2px solid #d7d7d7;
     padding: 2rem;
     border-radius: 16px;
-    width: calc(50% - 1rem);
-    .header {}
+    max-width: 42rem;
+    margin-right: 1rem;
     .month-container {
         width: 100%;
         height: 100%;
@@ -302,18 +302,33 @@ body {
     .body {
         width: 100%;
         height: 100%;
-        flex: 1;
     }
     table {
         width: 100%;
         height: 100%;
+        border-spacing: 0;
         tbody {
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+            tr {
+                width: 100%;
+                display: flex;
+                justify-content:center;
+            }
             tr:not(:first-child) td {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 4.5rem;
+                height: 2.5rem;
                 font-size: 1.2rem;
                 background: #FFFFFF;
                 border: 2px solid #D7D7D7;
                 text-align: center;
-                border-radius: 16px;
+                border-radius: 10000px;
                 cursor: pointer;
                 transition: .3s ease-in;
                 &.target-date,
@@ -322,14 +337,22 @@ body {
                     border-color: $red;
                     background-color: $red;
                 }
+                &:not(:last-child) {
+                    margin-right: 1rem;
+                }
             }
             tr:first-child {
+                width: 100%;
+                display: flex;
                 td {
-                    width: 64px;
-                    height: 36px;
-                    font-weight: 500;
-                    text-align: center;
-                    padding-bottom: 1rem;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 4.5rem;
+                    height: 2.5rem;
+                    &:not(:last-child) {
+                        margin-right: 1rem;
+                    }
                 }
             }
         }
@@ -2653,6 +2676,23 @@ footer {
     .bg-gradient {
         background: radial-gradient(153.02% 44.91% at 50% 50%, #A8C5EA 0%, #477ABC 100%);
     }
+    #calendar {
+        padding: 1rem;
+        width: 36rem;
+        table {
+            tbody {
+                tr:not(:first-child) td {
+                    width: 4rem;
+                }
+                tr:first-child {
+                    td {
+                        width: 4rem;
+                    }
+                }
+            }
+        }
+    
+    }
     nav {
         .nav__block {
             &:first-child {
@@ -2759,10 +2799,14 @@ footer {
             flex-direction: column;
             align-items: center;
             padding-left: 0;
-            width: calc(70%);
+            width: 90%;
             #calendar {
+                margin: 0;
                 margin-bottom: 2rem;
                 width: 100%;
+                tr {
+                    margin-bottom: 1rem;
+                }
             }
             .times-block {
                 width: 100%;
@@ -2939,6 +2983,9 @@ footer {
 @media screen and (max-width: 1024px) {
     .bg-gradient {
         height: 220vh;
+    }
+    #calendar {
+        margin: 0;
     }
     .thanks {
         width: calc(100% - 2rem);
@@ -3812,6 +3859,17 @@ footer {
 }
 
 @media screen and (max-width: 625px) {
+    #calendar {
+        .month-container {
+            
+            .body table tbody tr td {
+                width: 2.5rem;
+                height: 2.8rem;
+                border-radius: 12px;
+                margin-right: 0.5rem;
+            }
+        }
+    }
     .modal#modal-docs {
         width: 20rem;
         height: 30rem;

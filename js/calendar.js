@@ -52,13 +52,6 @@ var //this will be used by the user.
     ddd: ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
   };
 
-/**
- * this function will create month table.
- *
- * @param object data   this contains the calendar data
- * @param object option this is the settings object
- * @return html
- */
 function createMonthTable(data, option) {
   var table, tr, td, r, c, count;
 
