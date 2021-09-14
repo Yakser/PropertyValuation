@@ -425,8 +425,8 @@ body.modal-active {
   padding: 2rem;
   -webkit-border-radius: 16px;
           border-radius: 16px;
-  width: -webkit-calc(50% - 1rem);
-  width: calc(50% - 1rem);
+  max-width: 42rem;
+  margin-right: 1rem;
 }
 
 #calendar .month-container {
@@ -450,24 +450,65 @@ body.modal-active {
 #calendar .body {
   width: 100%;
   height: 100%;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
 }
 
 #calendar table {
   width: 100%;
   height: 100%;
+  border-spacing: 0;
+}
+
+#calendar table tbody {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+
+#calendar table tbody tr {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #calendar table tbody tr:not(:first-child) td {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 4.5rem;
+  height: 2.5rem;
   font-size: 1.2rem;
   background: #FFFFFF;
   border: 2px solid #D7D7D7;
   text-align: center;
-  -webkit-border-radius: 16px;
-          border-radius: 16px;
+  -webkit-border-radius: 10000px;
+          border-radius: 10000px;
   cursor: pointer;
   -webkit-transition: .3s ease-in;
   -o-transition: .3s ease-in;
@@ -480,12 +521,37 @@ body.modal-active {
   background-color: #E85151;
 }
 
+#calendar table tbody tr:not(:first-child) td:not(:last-child) {
+  margin-right: 1rem;
+}
+
+#calendar table tbody tr:first-child {
+  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 #calendar table tbody tr:first-child td {
-  width: 64px;
-  height: 36px;
-  font-weight: 500;
-  text-align: center;
-  padding-bottom: 1rem;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 4.5rem;
+  height: 2.5rem;
+}
+
+#calendar table tbody tr:first-child td:not(:last-child) {
+  margin-right: 1rem;
 }
 
 #calendar .month-container .header {
@@ -727,6 +793,16 @@ body.modal-active {
   -webkit-transform: rotate(-180deg);
       -ms-transform: rotate(-180deg);
           transform: rotate(-180deg);
+}
+
+.arrow-ico {
+  width: 63px;
+  margin-left: auto;
+}
+
+.menu-ico {
+  margin: 0;
+  margin-left: 50px;
 }
 
 .btn {
@@ -2081,14 +2157,15 @@ nav .nav__mobile {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-nav .nav__mobile img.logo {
-  margin-right: 2rem;
-}
-
-nav .nav__mobile img.ico {
-  margin-left: auto;
+nav .nav__mobile .nav__header {
+  line-height: 15px;
+  text-align: center;
 }
 
 nav .nav__block {
@@ -2108,6 +2185,15 @@ nav .nav__block {
 
 nav .nav__block img.logo {
   margin-right: 2rem;
+}
+
+nav .nav__block .nav__header {
+  font-size: 17px;
+  line-height: 21px;
+}
+
+nav .nav__block .nav__menu.nav__menu_laptops {
+  display: none;
 }
 
 nav .nav__block .nav__menu,
@@ -4074,8 +4160,27 @@ footer .footer__block .footer__address {
     background: -o-radial-gradient(153.02% 44.91% at 50% 50%, #A8C5EA 0%, #477ABC 100%);
     background: radial-gradient(153.02% 44.91% at 50% 50%, #A8C5EA 0%, #477ABC 100%);
   }
+  #calendar {
+    padding: 1rem;
+    width: 36rem;
+  }
+  #calendar table tbody tr:not(:first-child) td {
+    width: 4rem;
+  }
+  #calendar table tbody tr:first-child td {
+    width: 4rem;
+  }
   nav .nav__block:first-child li:not(:nth-child(2)) {
     display: none;
+  }
+  nav .nav__block .nav__menu.nav__menu_laptops {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  nav .nav__block .nav__menu.nav__menu_laptops li {
+    margin-left: 50px;
   }
   nav .nav__block:last-child ul {
     -webkit-box-orient: vertical;
@@ -4087,6 +4192,9 @@ footer .footer__block .footer__address {
     -webkit-align-items: flex-start;
         -ms-flex-align: start;
             align-items: flex-start;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
   }
   nav .nav__block:last-child ul li {
     margin: 0;
@@ -4096,6 +4204,9 @@ footer .footer__block .footer__address {
   }
   nav .nav__block:last-child ul li:first-child {
     margin-bottom: .5rem;
+  }
+  nav .nav__block:last-child ul li:last-child {
+    display: none;
   }
   main .blocks {
     width: 90%;
@@ -4175,12 +4286,15 @@ footer .footer__block .footer__address {
         -ms-flex-align: center;
             align-items: center;
     padding-left: 0;
-    width: -webkit-calc(70%);
-    width: calc(70%);
+    width: 90%;
   }
   main.payment .calendar-block #calendar {
+    margin: 0;
     margin-bottom: 2rem;
     width: 100%;
+  }
+  main.payment .calendar-block #calendar tr {
+    margin-bottom: 1rem;
   }
   main.payment .calendar-block .times-block {
     width: 100%;
@@ -4392,6 +4506,9 @@ footer .footer__block .footer__address {
 @media screen and (max-width: 1024px) {
   .bg-gradient {
     height: 220vh;
+  }
+  #calendar {
+    margin: 0;
   }
   .thanks {
     width: -webkit-calc(100% - 2rem);
@@ -5550,6 +5667,13 @@ footer .footer__block .footer__address {
 }
 
 @media screen and (max-width: 625px) {
+  #calendar .month-container .body table tbody tr td {
+    width: 2.5rem;
+    height: 2.8rem;
+    -webkit-border-radius: 12px;
+            border-radius: 12px;
+    margin-right: 0.5rem;
+  }
   .modal#modal-docs {
     width: 20rem;
     height: 30rem;

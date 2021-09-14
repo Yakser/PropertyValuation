@@ -486,6 +486,16 @@ body.modal-active {
   transform: rotate(-180deg);
 }
 
+.arrow-ico {
+  width: 63px;
+  margin-left: auto;
+}
+
+.menu-ico {
+  margin: 0;
+  margin-left: 50px;
+}
+
 .btn {
   color: #fff;
   font-weight: 500;
@@ -1316,12 +1326,11 @@ nav .nav__mobile {
   display: none;
   width: 100%;
   align-items: center;
+  justify-content: space-between;
 }
-nav .nav__mobile img.logo {
-  margin-right: 2rem;
-}
-nav .nav__mobile img.ico {
-  margin-left: auto;
+nav .nav__mobile .nav__header {
+  line-height: 15px;
+  text-align: center;
 }
 nav .nav__block {
   display: flex;
@@ -1330,6 +1339,13 @@ nav .nav__block {
 }
 nav .nav__block img.logo {
   margin-right: 2rem;
+}
+nav .nav__block .nav__header {
+  font-size: 17px;
+  line-height: 21px;
+}
+nav .nav__block .nav__menu.nav__menu_laptops {
+  display: none;
 }
 nav .nav__block .nav__menu,
 nav .nav__block .nav__socials {
@@ -2565,9 +2581,16 @@ main.reduction .main__subheader {
   nav .nav__block:first-child li:not(:nth-child(2)) {
     display: none;
   }
+  nav .nav__block .nav__menu.nav__menu_laptops {
+    display: flex;
+  }
+  nav .nav__block .nav__menu.nav__menu_laptops li {
+    margin-left: 50px;
+  }
   nav .nav__block:last-child ul {
     flex-direction: column;
     align-items: flex-start;
+    flex-wrap: wrap;
   }
   nav .nav__block:last-child ul li {
     margin: 0;
@@ -2577,6 +2600,9 @@ main.reduction .main__subheader {
   }
   nav .nav__block:last-child ul li:first-child {
     margin-bottom: 0.5rem;
+  }
+  nav .nav__block:last-child ul li:last-child {
+    display: none;
   }
 
   main .blocks {

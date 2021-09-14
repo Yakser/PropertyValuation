@@ -316,7 +316,7 @@ body {
             tr {
                 width: 100%;
                 display: flex;
-                justify-content:center;
+                justify-content: center;
             }
             tr:not(:first-child) td {
                 display: flex;
@@ -503,6 +503,16 @@ body {
     &.ico-180 {
         transform: rotate(-180deg);
     }
+}
+.arrow-ico {
+    width: 63px;
+    margin-left: auto;
+
+}
+
+.menu-ico {
+    margin: 0;
+    margin-left: 50px;
 }
 
 .btn {
@@ -1381,11 +1391,11 @@ nav {
         display: none;
         width: 100%;
         align-items: center;
-        img.logo {
-            margin-right: 2rem;
-        }
-        img.ico {
-            margin-left: auto;
+        justify-content: space-between;
+        .nav__header {
+            // font-size: 12px;
+            line-height: 15px;
+            text-align: center;
         }
     }
     .nav__block {
@@ -1394,6 +1404,14 @@ nav {
         align-items: center;
         img.logo {
             margin-right: 2rem;
+        }
+        .nav__header {
+            font-size: 17px;
+            line-height: 21px;
+            // text-align: center;
+        }
+        .nav__menu.nav__menu_laptops {
+            display: none;
         }
         .nav__menu,
         .nav__socials {
@@ -2691,7 +2709,6 @@ footer {
                 }
             }
         }
-    
     }
     nav {
         .nav__block {
@@ -2700,10 +2717,17 @@ footer {
                     display: none;
                 }
             }
+            .nav__menu.nav__menu_laptops {
+                display: flex;
+                li {
+                    margin-left: 50px;
+                }
+            }
             &:last-child {
                 ul {
                     flex-direction: column;
                     align-items: flex-start;
+                    flex-wrap: wrap;
                     li {
                         margin: 0;
                         &:first-child {
@@ -2711,6 +2735,9 @@ footer {
                         }
                         &:first-child {
                             margin-bottom: .5rem;
+                        }
+                        &:last-child {
+                            display: none;
                         }
                     }
                 }
@@ -3861,7 +3888,6 @@ footer {
 @media screen and (max-width: 625px) {
     #calendar {
         .month-container {
-            
             .body table tbody tr td {
                 width: 2.5rem;
                 height: 2.8rem;
