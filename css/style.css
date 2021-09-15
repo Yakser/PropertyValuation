@@ -3106,7 +3106,7 @@ main.reduction .choose-type a.selected, main.reduction .choose-type a:hover {
 main.report .report-block {
   border-bottom: 2px dashed #D7D7D7;
   border-top: 2px dashed #D7D7D7;
-  padding: 5rem 0;
+  padding: 3rem 0;
   width: 70%;
 }
 
@@ -3119,6 +3119,7 @@ main.report .report-block .report-block__header {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
+  padding-left: 5rem;
 }
 
 main.report .report-block .report-block__header h3 {
@@ -3137,26 +3138,16 @@ main.report .report-block .report-block__header span {
 }
 
 main.report .report-block .report-types {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
   margin-top: 3rem;
 }
 
 main.report .report-block .report-types .report-type {
-  margin-bottom: 1rem;
+  justify-self: center;
   width: 19rem;
   height: 14rem;
   display: -webkit-box;
@@ -4004,6 +3995,20 @@ footer .footer__block .footer__address {
   main.reduction .r-blocks {
     width: 90%;
   }
+  main.report .report-block .report-types {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    width: 100%;
+    margin: 2rem auto;
+    gap: 2rem;
+  }
+  main.report .report-block .report-types .report-type {
+    justify-self: flex-start;
+  }
+  main.report .report-block .report-types .report-type:first-child,
+  main.report .report-block .report-types .report-type:nth-child(3) {
+    justify-self: flex-end;
+  }
 }
 
 @media screen and (max-width: 1500px) {
@@ -4148,6 +4153,16 @@ footer .footer__block .footer__address {
   }
   main.reduction .news {
     width: 80%;
+  }
+  main.report .report-block .report-block__header {
+    padding-left: 0;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main.report .report-block .report-block__header span {
+    padding: 0.7rem 2rem;
   }
 }
 
@@ -4500,6 +4515,9 @@ footer .footer__block .footer__address {
     padding: 0;
     width: 100%;
     margin: 0;
+  }
+  main.report .report-block {
+    width: 90%;
   }
 }
 
@@ -4866,6 +4884,19 @@ footer .footer__block .footer__address {
   }
   main .blocks .block .ico {
     display: none;
+  }
+  main.report .report-block {
+    padding-top: 2rem;
+  }
+  main.report .report-block .report-block__header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main.report .report-block .report-block__header h3 {
+    margin-bottom: 1rem;
   }
   .modal {
     width: -webkit-calc(100% - 2rem);
@@ -5269,27 +5300,20 @@ footer .footer__block .footer__address {
     width: calc(100% - 1rem);
     padding-top: 2rem;
   }
-  main.report .report-block .report-block__header {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
   main.report .report-block .report-block__header h3 {
-    margin: 0;
-    margin-bottom: 1rem;
+    margin-right: 0;
   }
   main.report .report-block .report-types {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
   }
   main.report .report-block .report-types .report-type {
-    margin: 0;
-    margin-bottom: 1rem;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  main.report .report-block .report-types .report-type:first-child, main.report .report-block .report-types .report-type:nth-child(3) {
+    -ms-grid-column-align: center;
+        justify-self: center;
   }
   main.objects .bg-block {
     height: 15vh;
